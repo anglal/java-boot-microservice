@@ -12,7 +12,17 @@ Simple Microservice with spring boot
     5. Java 11
     6. Springboot 2.6.3
     
+## **Configuration**
+    - application.yml
 
+## **Micro services**
+    1. pi-ms
+    2. slry-ms
+    3. wrk-ms
+
+## **Application Configuration**
+    **1. pi-ms**
+        - server port : 400
 
 ## Spring Initilizr
 ![This is an image](/assets/images/spring.png)
