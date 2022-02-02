@@ -22,7 +22,7 @@ Simple Microservice with spring boot
     3. wrk-ms
 
 ## **Application Configuration** ##
-    **1. pi-ms**
+    1. pi-ms
         - server port : 400
 
 ## Spring Initilizr ##
