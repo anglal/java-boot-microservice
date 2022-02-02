@@ -1,8 +1,8 @@
 # java-boot-microservice-msql #
 Simple Microservice with spring boot
 
-### Notes: java-boot-microservice-msql is not a project, pi-ms, slry-ms, wrk-ms are individual maven projects. Run/open them as standalone project in any IDE's. ###
-## ** Tools used ** ##
+ Notes: java-boot-microservice-msql is not a project, pi-ms, slry-ms, wrk-ms are individual maven projects. Run/open them as standalone project in any IDE's.
+## **Tools used** ##
     1. Intellij 
 
 ## **Others** ##
@@ -22,7 +22,7 @@ Simple Microservice with spring boot
     3. wrk-ms
 
 ## **Application Configuration** ##
-    ###### **1. pi-ms**
+    **1. pi-ms**
         - server port : 400
 
 ## Spring Initilizr ##
