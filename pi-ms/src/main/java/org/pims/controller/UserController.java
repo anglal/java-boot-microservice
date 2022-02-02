@@ -1,2 +1,4 @@
-package org.pims.controller;public class UserController {
+package org.pims.controller;
+
+public class UserController {
 }
