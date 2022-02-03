@@ -1,0 +1,12 @@
+server:
+  port: 400
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/msqldbx
+    username: pi-ms-user
+    password: pi-ms-userpassword
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  show-sql: true
