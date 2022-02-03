@@ -16,3 +16,6 @@ git push -u origin branch1
 
 # See user details
 git config --list
+
+# See all branches
+git branch -a
