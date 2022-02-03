@@ -1,4 +1,7 @@
 # Create a local branch
 git checkout -b branch1
 
+# Create a branch on repo with given name and push the code
+
+git push -u origin branch1
 
