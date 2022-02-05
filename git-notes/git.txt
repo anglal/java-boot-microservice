@@ -17,5 +17,14 @@ git push -u origin branch1
 # See user details
 git config --list
 
-# See all branches
+# See all branches(remote and local)
 git branch -a
+
+# See all local branches
+git branch
+
+# See all remote branches
+git branch -r
+
+# Delete remote branch
+git push origin --delete branch1
