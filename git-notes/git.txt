@@ -28,3 +28,6 @@ git branch -r
 
 # Delete remote branch
 git push origin --delete branch1
+
+# Discard changes in local branch
+git checkout .
