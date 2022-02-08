@@ -34,3 +34,6 @@ git branch -d branch1
 
 # Discard changes in local branch
 git checkout .
+
+# Prune branches(branch is deleted in remote but still shows on local while doing git branch -a)
+git remote prune origin
