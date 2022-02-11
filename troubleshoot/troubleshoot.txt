@@ -1,0 +1,4 @@
+Application fails, does not run
+
+Make sure to check application.properties file
+Check line by line for dbname, username, password etc.

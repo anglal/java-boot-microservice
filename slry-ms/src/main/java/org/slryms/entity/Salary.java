@@ -18,7 +18,7 @@ public class Salary {
     @Column(name="advance_paid")
     private BigInteger advancePaid;
 
-    @Column(name="emp_id")
+    @Column(name="emp_id", unique=true)
     private Integer employeeId;
 
     public Salary() {
