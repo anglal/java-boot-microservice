@@ -2,6 +2,7 @@ package org.wrkms.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.*;
 import org.wrkms.dto.WorkDto;
 import org.wrkms.service.WorkService;
@@ -13,6 +14,9 @@ import java.util.List;
 @RequestMapping("/work-services")    //maps HTTP requests
 public class WorkController {
     @Autowired
+    private KafkaTemplate<String, List<WorkDto>> kafkaTemplate;
+    private final String TOPIC = "kfk_topic";
+    @Autowired
     private WorkService workService;
     @PostMapping("/works")
     public void saveWork(@RequestBody WorkDto workDto){
@@ -22,6 +26,8 @@ public class WorkController {
     public List<WorkDto> fetchWorksByEmpId(@PathVariable("empId") Integer empId){
         List<WorkDto> workList = new ArrayList<>();
         workList = this.workService.fetchWorksByEmpId(empId);
+        this.kafkaTemplate.send(TOPIC,workList);
+
         return workList;
     }
 

@@ -15,6 +15,7 @@ Simple Microservice with spring boot
     4. Maven
     5. Java 11
     6. Springboot 2.6.3
+    7. Apache Kafka
     
 ## **Configuration** ##
     - application.yml

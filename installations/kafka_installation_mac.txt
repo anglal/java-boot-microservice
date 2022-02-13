@@ -1,0 +1,21 @@
+Open terminal
+
+# Install Kafka and zookeeper
+brew install kafka
+
+# If it does not install zookeeper
+brew install zookeeper
+
+# Run zookeeper
+zkServer start
+
+# Run Kafka
+/opt/homebrew/opt/kafka/bin/kafka-server-start /opt/homebrew/etc/kafka/server.properties
+
+
+# Stop zookeeper
+zkServer stop
+
+
+# Stop Kafka
+Command + C
