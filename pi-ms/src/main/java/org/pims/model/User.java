@@ -7,8 +7,9 @@ import javax.persistence.*;
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "employee_id")
+    private Integer empployeeId;
     private String fName;
     private String lName;
     private String address;
@@ -16,19 +17,19 @@ public class User {
     public User() {
     }
 
-    public User(int id, String fName, String lName, String address) {
-        this.id = id;
+    public User(Integer empployeeId, String fName, String lName, String address) {
+        this.empployeeId = empployeeId;
         this.fName = fName;
         this.lName = lName;
         this.address = address;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getEmpployeeId() {
+        return empployeeId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setEmpployeeId(Integer empployeeId) {
+        this.empployeeId = empployeeId;
     }
 
     public String getfName() {

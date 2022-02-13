@@ -1,27 +1,33 @@
 package org.pims.dto;
 
+import org.pims.model.Work;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class UserDTO {
-    private int id;
+    private Integer empployeeId;
     private String fName;
     private String lName;
     private String address;
-
+    private List<Work> workList = new ArrayList<>(); // Work info is obtained from wrk-ms microservice
     public UserDTO() {
     }
 
-    public UserDTO(int id, String fName, String lName, String address) {
-        this.id = id;
+    public UserDTO(Integer empployeeId, String fName, String lName, String address, List<Work> workList) {
+        this.empployeeId = empployeeId;
         this.fName = fName;
         this.lName = lName;
         this.address = address;
+        this.workList = workList;
     }
 
-    public int getId() {
-        return id;
+    public Integer getEmpployeeId() {
+        return empployeeId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setEmpployeeId(Integer empployeeId) {
+        this.empployeeId = empployeeId;
     }
 
     public String getfName() {
@@ -46,5 +52,13 @@ public class UserDTO {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public List<Work> getWorkList() {
+        return workList;
+    }
+
+    public void setWorkList(List<Work> workList) {
+        this.workList = workList;
     }
 }

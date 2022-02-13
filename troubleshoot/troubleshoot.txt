@@ -2,3 +2,15 @@ Application fails, does not run
 
 Make sure to check application.properties file
 Check line by line for dbname, username, password etc.
+
+
+
+After dropping database on mysql, if user is not deleted
+create database msqldbx;
+use msqldbx;
+grant all on msqldbx.* to 'pi-ms-user'@'%';
+
+
+Port number in use(Mac)
+sudo lsof -i :400 
+kill -9 <PID>

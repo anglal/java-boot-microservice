@@ -1,22 +1,9 @@
-package org.wrkms.model;
+package org.pims.model;
 
-import javax.persistence.*;
-
-@Entity
-@Table(name="work")
 public class Work {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="work_id")
     private Integer workId;
-
-    @Column(name="work_shift")
     private String workShift;
-
-    @Column(name="work_hours")
     private Integer workHours;
-
-    @Column(name="employee_id", unique = false)
     private Integer employeeId;
 
     public Work() {

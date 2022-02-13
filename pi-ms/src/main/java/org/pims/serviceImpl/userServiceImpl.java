@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -32,6 +33,17 @@ public class userServiceImpl implements UserService {
         return mapToUserDTO(user);
     }
 
+    @Override
+    public UserDTO getUserById(int userId) {
+        Optional<User> userOptional = userRepository.findById(userId);
+        if(userOptional.isPresent()){
+            User user = userOptional.get();
+            UserDTO userDTO = new UserDTO();
+            BeanUtils.copyProperties(user,userDTO);
+            return userDTO;
+        }
+        return null;
+    }
     // Type Converter methods
     private User mapToUser(UserDTO userDTO){
         User user = new User();
