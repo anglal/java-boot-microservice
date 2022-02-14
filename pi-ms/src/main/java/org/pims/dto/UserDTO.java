@@ -10,11 +10,11 @@ public class UserDTO {
     private String fName;
     private String lName;
     private String address;
-    private List<Work> workList = new ArrayList<>(); // Work info is obtained from wrk-ms microservice
+    private List<WorkDto> workList = new ArrayList<>(); // Work info is obtained from wrk-ms microservice
     public UserDTO() {
     }
 
-    public UserDTO(Integer empployeeId, String fName, String lName, String address, List<Work> workList) {
+    public UserDTO(Integer empployeeId, String fName, String lName, String address, List<WorkDto> workList) {
         this.empployeeId = empployeeId;
         this.fName = fName;
         this.lName = lName;
@@ -54,11 +54,11 @@ public class UserDTO {
         this.address = address;
     }
 
-    public List<Work> getWorkList() {
+    public List<WorkDto> getWorkList() {
         return workList;
     }
 
-    public void setWorkList(List<Work> workList) {
+    public void setWorkList(List<WorkDto> workList) {
         this.workList = workList;
     }
 }

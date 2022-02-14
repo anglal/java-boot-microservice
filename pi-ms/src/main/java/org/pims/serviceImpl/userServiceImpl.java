@@ -2,10 +2,13 @@ package org.pims.serviceImpl;
 
 import org.pims.dao.UserRepository;
 import org.pims.dto.UserDTO;
+import org.pims.dto.WorkDto;
 import org.pims.model.User;
+import org.pims.model.Work;
 import org.pims.service.UserService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -18,11 +21,21 @@ public class userServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
+
+//  to save data from kafka topics
+    private List<WorkDto> workDtoList = new ArrayList<>();
+
+    @KafkaListener(topics ={"topic_wrk"}, groupId = "acctSrvc")
+    public void getDataFromKafkaTopics(List<WorkDto> workList){
+        this.workDtoList = workList;
+    }
     @Override
     public List<UserDTO> getUsers() {
         List<User> allUsers = new ArrayList<>();
         allUsers =  userRepository.findAll();
-        return allUsers.stream().map(user -> mapToUserDTO(user)).collect(Collectors.toList());
+
+        allUsers.stream().map(user -> mapToUserDTO(user)).collect(Collectors.toList());
+        return null;
     }
 
     @Override

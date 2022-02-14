@@ -15,7 +15,7 @@ import java.util.List;
 public class WorkController {
     @Autowired
     private KafkaTemplate<String, List<WorkDto>> kafkaTemplate;
-    private final String TOPIC = "kfk_topic";
+    private static final String TOPIC = "topic_wrk";
     @Autowired
     private WorkService workService;
     @PostMapping("/works")

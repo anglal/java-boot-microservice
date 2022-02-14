@@ -13,7 +13,7 @@ import java.util.List;
 public class SalaryController {
     @Autowired
     private KafkaTemplate<String, List<SalaryDto>> kafkaTemplate;
-    private final String TOPIC = "topic_slry";
+    private static final String TOPIC = "topic_slry";
     @Autowired
     private SalaryService salaryService;
     @PostMapping("/salaries")

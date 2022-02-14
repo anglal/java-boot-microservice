@@ -1,6 +1,8 @@
 package org.pims.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "user_table")
@@ -13,15 +15,18 @@ public class User {
     private String fName;
     private String lName;
     private String address;
+    @Transient
+    private List<Work> workList = new ArrayList<>();
 
     public User() {
     }
 
-    public User(Integer empployeeId, String fName, String lName, String address) {
+    public User(Integer empployeeId, String fName, String lName, String address, List<Work> workList) {
         this.empployeeId = empployeeId;
         this.fName = fName;
         this.lName = lName;
         this.address = address;
+        this.workList = workList;
     }
 
     public Integer getEmpployeeId() {
@@ -54,5 +59,13 @@ public class User {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public List<Work> getWorkList() {
+        return workList;
+    }
+
+    public void setWorkList(List<Work> workList) {
+        this.workList = workList;
     }
 }
