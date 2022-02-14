@@ -10,3 +10,16 @@ spring:
     password: pi-ms-userpassword
     driver-class-name: com.mysql.cj.jdbc.Driver
   show-sql: true
+
+     # Kafka config(Consumer)
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: acctSrvc
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+
+#      spring.kafka.producer.key-serializer=org.apache.kafka.common.serialization.StringSerializer
+#      spring.kafka.producer.value-serializer=org.springframework.kafka.support.serializer.JsonSerializer

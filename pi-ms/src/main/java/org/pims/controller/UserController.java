@@ -14,13 +14,19 @@ public class UserController {
     @Autowired
     private UserService userService;
     @GetMapping("/users")
-    public @ResponseBody List<UserDTO> getUsers() {
+    public List<UserDTO> getUsers() {
         List<UserDTO> users = new ArrayList<UserDTO>();
         users = userService.getUsers();
         return users;
     }
+
+    @GetMapping("/users/{userId}")
+    public UserDTO getUserById(@PathVariable("userId") int userId){
+        return userService.getUserById(userId);
+    }
+
     @PostMapping("/users")
-    public @ResponseBody UserDTO addUser(@RequestBody UserDTO userDTO){
-        return userService.addUser(userDTO);
+    public UserDTO addUser(@RequestBody UserDTO userDTO){
+        return this.userService.addUser(userDTO);
     }
 }
