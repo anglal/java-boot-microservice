@@ -26,7 +26,7 @@ public class WorkController {
     public List<WorkDto> fetchWorksByEmpId(@PathVariable("empId") Integer empId){
         List<WorkDto> workList = new ArrayList<>();
         workList = this.workService.fetchWorksByEmpId(empId);
-        this.kafkaTemplate.send(TOPIC,workList);
+//        this.kafkaTemplate.send(TOPIC,workList);
 
         return workList;
     }

@@ -35,7 +35,8 @@ Simple Microservice with spring boot
         - server port : 600
 
 ## Spring Initilizr ##
-![This is an image](/assets/images/spring.png)
+![This is an image](assets/images/spring.png)
+
 
 
 
