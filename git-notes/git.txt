@@ -37,3 +37,6 @@ git checkout .
 
 # Prune branches(branch is deleted in remote but still shows on local while doing git branch -a)
 git remote prune origin
+
+# Undo the deletion
+git checkout Head <filename>
