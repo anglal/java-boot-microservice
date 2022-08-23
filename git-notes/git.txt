@@ -40,3 +40,6 @@ git remote prune origin
 
 # Undo the deletion
 git checkout Head <filename>
+
+#Undo unstaged changes
+git checkout <filename>
