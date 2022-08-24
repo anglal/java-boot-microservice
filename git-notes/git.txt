@@ -53,3 +53,12 @@ git diff branch1..branch2
 # Compare specific file between two branches
 git diff branch1..branch2 -- <filename>
 eg. git diff feature/branch1..develop/branch2 -- pom.xml
+
+# Rebase develop branch on to feature branch
+# Feature branch will get all the commits in develop
+# Feature branch will be on top of develop branch
+
+
+# First check ou to feature branch
+git rebase develop
+
