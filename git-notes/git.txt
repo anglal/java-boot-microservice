@@ -43,3 +43,6 @@ git checkout Head <filename>
 
 #Undo unstaged changes
 git checkout <filename>
+
+# See changes in commits/merge
+git show <commitnuber/mergenumber>
