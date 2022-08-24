@@ -46,3 +46,10 @@ git checkout <filename>
 
 # See changes in commits/merge
 git show <commitnuber/mergenumber>
+
+# Compare two branches
+git diff branch1..branch2
+
+# Compare specific file between two branches
+git diff branch1..branch2 -- <filename>
+eg. git diff feature/branch1..develop/branch2 -- pom.xml
