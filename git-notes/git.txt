@@ -62,3 +62,5 @@ eg. git diff feature/branch1..develop/branch2 -- pom.xml
 # First check ou to feature branch
 git rebase develop
 
+# Unstage the file 
+git reset <filename>
