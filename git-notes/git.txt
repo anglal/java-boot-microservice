@@ -59,8 +59,15 @@ eg. git diff feature/branch1..develop/branch2 -- pom.xml
 # Feature branch will be on top of develop branch
 
 
-# First check ou to feature branch
+# First check out to feature branch
 git rebase develop
 
 # Unstage the file 
 git reset <filename>
+
+# Stash changes
+git stash
+
+# Restore the stashed changes
+git stash pop
+
