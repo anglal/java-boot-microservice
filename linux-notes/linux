@@ -1,0 +1,4 @@
+Linux Notes
+
+##### Remove all contents from the curretn directory
+rm *
