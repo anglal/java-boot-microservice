@@ -1,3 +1,7 @@
+# Pull a single remote branch
+- Create and checkout to the local branch
+- pull the remote branch : git pull origin branchname 
+
 # Create a local branch
 git checkout -b branch1
 
