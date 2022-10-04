@@ -1,0 +1,4 @@
+
+Run with application with different profile
+->Run as configurations
+->VM arguments : -Dspring.profiles.active=dev
