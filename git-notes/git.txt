@@ -2,6 +2,9 @@
 - Create and checkout to the local branch
 - pull the remote branch : git pull origin branchname 
 
+# Check out the remote branch when local branch has not been created yet
+-git checkout -b localBranch remote branch
+
 # Create a local branch
 git checkout -b branch1
 
@@ -36,7 +39,7 @@ git push origin --delete branch1
 # Delete local branch
 git branch -d branch1
 
-# Discard changes in local branch
+# Discard changes in local branch when files are tracked
 git checkout .
 
 # Prune branches(branch is deleted in remote but still shows on local while doing git branch -a)
