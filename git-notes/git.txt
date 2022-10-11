@@ -8,6 +8,10 @@
 # Create a local branch
 git checkout -b branch1
 
+# Delete all untracked files and directories
+# check what will be deleted : git clean -n -d
+- git clean -fd
+
 # Create a remote branch on repo with given name and push the code
 
 git push -u origin branch1
@@ -78,3 +82,5 @@ git stash
 # Restore the stashed changes
 git stash pop
 
+# Show untracked status
+git status -u
