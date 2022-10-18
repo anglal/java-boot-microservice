@@ -1,0 +1,2 @@
+1. Exclude sonar scanning in maven properties
+<sonar.exclusions> src/test/app/**/*, src/test/Resources/public/**/*, **/com/api/test.java <sonar.exclusions>
