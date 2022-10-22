@@ -15,6 +15,10 @@ git checkout -b branch1
 # Remove all the unstaged changes and put it into state of previous commit
 git reset --hard
 
+# Undo commits if not pushed to remote repo (~ -> 1 unpushed commit, ~2 -> 2 unpushed commits etc.)
+git reset --soft HEAD~ 
+git reset --soft HEAD~2
+git reset --soft HEAD~3
 # Create a remote branch on repo with given name and push the code
 
 git push -u origin branch1
