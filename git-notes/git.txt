@@ -12,6 +12,9 @@ git checkout -b branch1
 # check what will be deleted : git clean -n -d
 - git clean -fd
 
+# Remove all the unstaged changes and put it into state of previous commit
+git reset --hard
+
 # Create a remote branch on repo with given name and push the code
 
 git push -u origin branch1
