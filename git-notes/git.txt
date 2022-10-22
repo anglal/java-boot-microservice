@@ -15,6 +15,12 @@ git checkout -b branch1
 # Remove all the unstaged changes and put it into state of previous commit
 git reset --hard
 
+# Undo merges (git reflog to see head; resetting HEAD@5 will lose HEAD less than 5 careful!!!!)
+>> git reflog: dab04ec HEAD@{0}, aaaaaaa HEAD@{1} and bbbbbbb HEAD@{2}, if git reset --hard bbbbbbb, it loses all the commits upto 2, that means 1 and 2
+ 
+ git reset --hard x 
+ Note: x is the number before x HEAD{1}, while doing git reflog
+
 # Undo commits if not pushed to remote repo (~ -> 1 unpushed commit, ~2 -> 2 unpushed commits etc.)
 git reset --soft HEAD~ 
 git reset --soft HEAD~2
