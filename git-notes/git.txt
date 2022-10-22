@@ -71,6 +71,8 @@ git checkout <filename>
 # See changes in commits/merge
 git show <commitnuber/mergenumber>
 
+git show <commitnumber/mergenumber> --name-only
+
 # Compare two branches
 git diff branch1..branch2
 
