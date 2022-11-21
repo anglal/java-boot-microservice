@@ -103,3 +103,19 @@ public static int[] reverseAnArray(int[] arr) {
 		return arr;
 
 	}
+	
+	
+6. Find the minimum from int[]
+
+	public static int findMin(int[] arr) {
+		int minimum = arr[0];
+
+		for (int i = 1; i < arr.length; i++) {
+			if (arr[i] < minimum) {
+
+				minimum = arr[i];
+			}
+		}
+
+		return minimum;
+	}
