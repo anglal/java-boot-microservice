@@ -48,3 +48,20 @@ public static int[] reverseAnArray(int[] arr) {
 		}
 		return result;
 	}
+
+4. Reverse an int[]
+	
+		int begin = 0;
+		int end = arr.length - 1;
+
+		while (begin < end) {
+
+			int temp = arr[begin];
+			arr[begin] = arr[end];
+			arr[end] = temp;
+			begin++;
+			end--;
+		}
+
+		return arr;
+	}
