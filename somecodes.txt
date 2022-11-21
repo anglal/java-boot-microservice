@@ -65,3 +65,41 @@ public static int[] reverseAnArray(int[] arr) {
 
 		return arr;
 	}
+	
+
+5. Separate odd to left and even to right in int[]
+
+	public static int[] separateEvenOdd(int[] arr) {
+
+		int begin = 0;
+		int end = arr.length - 1;
+
+		while (begin < end) {
+			if (arr[begin] % 2 == 0 && arr[end] % 2 != 0) {
+				int temp = arr[begin];
+				arr[begin] = arr[end];
+				arr[end] = temp;
+
+				begin++;
+				end--;
+				continue;
+
+			} else if (arr[begin] % 2 != 0 && arr[end] % 2 != 0) {
+				begin++;
+				continue;
+			} else if (arr[begin] % 2 != 0 && arr[end] % 2 == 0) {
+				begin++;
+				end--;
+				continue;
+
+			}
+
+			if (arr[begin] % 2 == 0 && arr[end] % 2 == 0) {
+
+				end--;
+			}
+
+		}
+		return arr;
+
+	}
