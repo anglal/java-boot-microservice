@@ -167,3 +167,25 @@ public static int[] reverseAnArray(int[] arr) {
 		
 		return thirdMax;
 	}
+
+
+9. Move even nubmers to right in int[]
+
+	public static void moveEvenToRight(int[] arr) {
+		int i = 0;
+		int j = 0;
+
+		for (; i < arr.length; i++) {
+
+			if (arr[i] % 2 != 0 && arr[j] % 2 == 0) {
+				int temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
+			if (arr[j] % 2 != 0) {
+				j++;
+			}
+		}
+
+	}
+}
