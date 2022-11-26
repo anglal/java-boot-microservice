@@ -139,3 +139,31 @@ public static int[] reverseAnArray(int[] arr) {
 		
 		return secondMax;
 	}
+
+
+8. Find the third highest value from int[]
+
+	public static int thirdMax(int[] arr) {
+		
+		int max = Integer.MIN_VALUE;
+		int secondMax = Integer.MIN_VALUE;
+		int thirdMax = Integer.MIN_VALUE;
+		
+		for(int i = 0; i < arr.length; i++) {
+			if(arr[i] > max) {
+				thirdMax = secondMax;
+				secondMax = max;
+				max = arr[i];
+			}
+			else if(arr[i] > secondMax && arr[i] < max) {
+				thirdMax = secondMax;
+				secondMax = arr[i];
+				
+			}
+			else if(arr[i ] > thirdMax && arr[i] < secondMax ) {
+				thirdMax = arr[i];
+			}
+		}
+		
+		return thirdMax;
+	}
