@@ -209,3 +209,17 @@ public static int[] reverseAnArray(int[] arr) {
 		}
 
 	}
+
+11. Resize an int[]
+
+	public static int[] resize(int[] arr, int size) {
+
+		int[] resizedArr = new int[size];
+		for (int i = 0; i < arr.length; i++) {
+			resizedArr[i] = arr[i];
+
+		}
+
+		return resizedArr;
+
+	}
