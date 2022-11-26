@@ -141,7 +141,7 @@ public static int[] reverseAnArray(int[] arr) {
 	}
 
 
-8. Find the third highest value from int[]
+8. Find the third maximum value from int[]
 
 	public static int thirdMax(int[] arr) {
 		
