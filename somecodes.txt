@@ -238,3 +238,25 @@ public static int[] reverseAnArray(int[] arr) {
 
 		return sum;
 	}
+	
+13. Check whether the string is a pallindrome
+
+public static boolean checkPalin(String str) {
+
+		char[] arr = str.toCharArray();
+
+		int i = 0;
+		int j = str.length() - 1;
+
+		while (i < j) {
+			if (arr[i] != arr[j]) {
+				return false;
+			}
+
+			i++;
+			j--;
+		}
+
+		return true;
+	}
+
