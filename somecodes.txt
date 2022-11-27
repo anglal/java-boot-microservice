@@ -317,3 +317,16 @@ public class SinglyLinkedList {
 	}
 
 }
+
+
+16. Print the elements of the given singly linked list if head is given
+
+	public static void printSinglyLinkedList(ListNode head) {
+
+		ListNode current = head;
+		while (current != null) {
+			System.out.println(current.data);
+			current = current.next;
+		}
+
+	
