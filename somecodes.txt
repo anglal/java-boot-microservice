@@ -283,3 +283,37 @@ public class SinglyLinkedList {
 	}
 
 }
+
+
+15. Create singly linked list 1->2->3
+
+public class SinglyLinkedList {
+
+	private ListNode head;
+
+	private static class ListNode {
+
+		private int data;
+
+		private ListNode next;
+
+		public ListNode(int data) {
+			this.data = data;
+			this.next = null;
+
+		}
+
+	}
+
+	public static void main(String[] args) {
+		SinglyLinkedList linkedList = new SinglyLinkedList();
+		linkedList.head = new ListNode(1);
+		ListNode node2 = new ListNode(2);
+		ListNode node3 = new ListNode(3);
+
+		linkedList.head.next = node2;
+		node2.next = node3;
+
+	}
+
+}
