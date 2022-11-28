@@ -346,3 +346,12 @@ public static int findLength(ListNode head) {
 
 	}
 
+
+18. Insert a node at the beginning of the Singly Linked List
+
+	public static ListNode addNodeAtBegin(ListNode head, int data) {
+		ListNode node = new ListNode(data);
+		node.next = head;
+		head = node;
+		return head;
+	}
