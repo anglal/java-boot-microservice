@@ -330,3 +330,19 @@ public class SinglyLinkedList {
 		}
 
 	
+	
+17. Find the length of the Singly Linked List if head is given
+
+public static int findLength(ListNode head) {
+
+		ListNode current = head;
+		int length = 0;
+		while (current != null) {
+			length++;
+			current = current.next;
+		}
+
+		return length;
+
+	}
+
