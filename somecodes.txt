@@ -398,3 +398,126 @@ public static char mostOccurChar(String input) {
 
 		return maxChar;
 	}
+	
+	
+21. Find average, highest, lowest and failures in an array list. Pass marks is 35.
+
+	public static ArrayList<Integer> studentReport(Integer[] history, Integer[] geography, Integer[] moral, Integer[] calculus, Integer[] social) {
+
+
+		ArrayList<Integer> result = new ArrayList<Integer>();
+
+		int historyAve = 0;
+		int geographyAve = 0;
+		int moralAve = 0;
+		int calculusAve = 0;
+		int socialAve = 0;
+
+		int historyHighest = history[0];
+		int geographyHighest = geography[0];
+		int moralHighest = moral[0];
+		int calculusHighest = calculus[0];
+		int socialHighest = social[0];
+
+		int historyLowest = history[0];
+		int geographyLowest = geography[0];
+		int moralLowest = moral[0];
+		int calculusLowest = calculus[0];
+		int socialLowest = social[0];
+
+		int failHistory = 0;
+		int failGeography = 0;
+		int failMoral = 0;
+		int failCalculus = 0;
+		int failSocial = 0;
+
+		for (int i = 0; i < history.length; i++) {
+			historyAve += history[i];
+			geographyAve += geography[i];
+			moralAve += moral[i];
+			calculusAve += calculus[i];
+			socialAve += social[i];
+
+			if (history[i] > historyHighest) {
+				historyHighest = history[i];
+			}
+			if (geography[i] > geographyHighest) {
+				geographyHighest = geography[i];
+			}
+			if (moral[i] > moralHighest) {
+				moralHighest = moral[i];
+			}
+			if (calculus[i] > calculusHighest) {
+				calculusHighest = calculus[i];
+			}
+			if (social[i] > socialHighest) {
+				socialHighest = social[i];
+			}
+
+			if (history[i] < historyLowest) {
+				historyLowest = history[i];
+			}
+			if (geography[i] < geographyLowest) {
+				geographyLowest = geography[i];
+			}
+			if (moral[i] < moralLowest) {
+				moralLowest = moral[i];
+			}
+			if (calculus[i] < calculusLowest) {
+				calculusLowest = calculus[i];
+			}
+			if (social[i] < socialLowest) {
+				socialLowest = social[i];
+			}
+
+			if (history[i] < 35) {
+				failHistory++;
+			}
+			if (geography[i] < 35) {
+				failGeography++;
+			}
+			if (moral[i] < 35) {
+				failMoral++;
+			}
+			if (calculus[i] < 35) {
+				failCalculus++;
+			}
+			if (social[i] < 35) {
+				failSocial++;
+			}
+
+		}
+		historyAve /= history.length;
+		geographyAve /= history.length;
+		moralAve /= history.length;
+		calculusAve /= history.length;
+		socialAve /= history.length;
+
+		result.add(historyAve);
+		result.add(geographyAve);
+		result.add(moralAve);
+		result.add(calculusAve);
+		result.add(socialAve);
+
+		result.add(historyHighest);
+		result.add(geographyHighest);
+		result.add(moralHighest);
+		result.add(calculusHighest);
+		result.add(socialHighest);
+
+		result.add(historyLowest);
+		result.add(geographyLowest);
+		result.add(moralLowest);
+		result.add(calculusLowest);
+		result.add(socialLowest);
+
+		result.add(failHistory);
+		result.add(failGeography);
+		result.add(failMoral);
+		result.add(failCalculus);
+		result.add(failSocial);
+
+		return result;
+
+	}
+
