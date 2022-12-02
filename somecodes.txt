@@ -359,21 +359,22 @@ public static int findLength(ListNode head) {
 	
 19. Insert a node at the end of the Singly Linked List
 
-	public void insertAtEnd(int val) {
-
-		ListNode current = head;
-
-		while (current != null) {
-			ListNode lastNode = current;
-			current = current.next;
-			if (current == null) {
-				ListNode newNode = new ListNode(val);
-				lastNode.next = newNode;
+public void addNodeAtEnd(int data) {
+		
+		
+		ListNode newNode = new ListNode(data);
+		if(null == head) {
+			head = newNode;
+			
+		}else {
+			ListNode last = head;
+			while(null != last.next) {
+				last = last.next;
 			}
-
+		last.next = newNode;
 		}
-
 	}
+
 
 20. Find maximum occuring character
 
