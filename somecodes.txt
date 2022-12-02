@@ -376,7 +376,29 @@ public void addNodeAtEnd(int data) {
 	}
 
 
-20. Find maximum occuring character
+20. Insert the data in the given position
+		public void insertAt(int position, int data) {
+		ListNode newNode = new ListNode(data);
+
+		if (1 == position) {
+			newNode.next = head;
+			head = newNode;
+		} else {
+
+			ListNode previous = head;
+			int count = 1;
+			// Find the previous node of the position
+			while (count < position - 1) {
+				previous = previous.next;
+				count++;
+			}
+
+			newNode.next = previous.next;
+			previous.next = newNode;
+		}
+	}
+
+21. Find maximum occuring character
 
 public static char mostOccurChar(String input) {
 
@@ -401,7 +423,7 @@ public static char mostOccurChar(String input) {
 	}
 	
 	
-21. Find average, highest, lowest and failures in an array list. Pass marks is 35.
+22. Find average, highest, lowest and failures in an array list. Pass marks is 35.
 
 	public static ArrayList<Integer> studentReport(Integer[] history, Integer[] geography, Integer[] moral, Integer[] calculus, Integer[] social) {
 
