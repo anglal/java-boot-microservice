@@ -13,5 +13,10 @@ docker images
 docker image inspect <image id>
 
 4. Delete existing docker image
-docker image rm [OPTIONS] IMAGE [IMAGE...]
-eg. docker image rm lal/docker
+docker image rm -f <imageid>
+eg. docker image rm -f er444333
+
+5. Create docker container from docker image
+docker run -p <port>:<docker port> <image name>
+
+docker run -p 8080:8080 lal/docker
