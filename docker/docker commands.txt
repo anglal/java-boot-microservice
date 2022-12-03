@@ -16,7 +16,17 @@ docker image inspect <image id>
 docker image rm -f <imageid>
 eg. docker image rm -f er444333
 
-5. Create docker container from docker image
+5. Create docker container/instance from docker image
 docker run -p <port>:<docker port> <image name>
 
 docker run -p 8080:8080 lal/docker
+docker run -p 8081:8080 lal/docker
+
+6. See all containers running
+docker ps
+
+7. See the container logs
+docker logs <container id>
+
+8. Stop docker container
+docker stop <container id>
