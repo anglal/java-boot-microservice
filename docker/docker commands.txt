@@ -1,0 +1,11 @@
+1. Build docker image in command line
+
+
+docker build . -t lal/docker
+
+
+2. See docker images
+
+docker images
+
+
