@@ -8,4 +8,10 @@ docker build . -t lal/docker
 
 docker images
 
+3. Inspect docker image
 
+docker image inspect <image id>
+
+4. Delete existing docker image
+docker image rm [OPTIONS] IMAGE [IMAGE...]
+eg. docker image rm lal/docker
