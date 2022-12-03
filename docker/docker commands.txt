@@ -43,5 +43,7 @@ docker stop <container id>
 11. Follow logs on container
 docker logs -f <container id>
 
-11.
+11. Pause a container
+docker pause <container id>
+
 
