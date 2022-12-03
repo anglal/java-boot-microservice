@@ -46,4 +46,5 @@ docker logs -f <container id>
 11. Pause a container
 docker pause <container id>
 
-
+12. Unpause a docker
+docker unpause <container id>
