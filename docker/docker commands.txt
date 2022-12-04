@@ -21,7 +21,7 @@ docker run -p <port>:<docker port> <image name>
 
 docker run -p 8080:8080 lal/docker
 docker run -p 8081:8080 lal/docker
-5. a) Run container in detached mode
+5. a) Run container in detached mode(No logs)
 docker run -d -p <port>:<docker port> <image name>
 
 6. Start multiple docker containers
