@@ -34,8 +34,6 @@ docker ps
 8. See all containers
 docker ps -a
 
-
-
 9. See the container logs
 docker logs <container id>
 
@@ -78,5 +76,6 @@ docker rm <condainer id>
 		</plugins>
 	</build>
   
-  18. 
+  18. Build docker image from maven using build in pom
+  mvn spring-boot:build-image
 
