@@ -55,3 +55,5 @@ docker container inspect <container id>
 14. Kill docker container(kills right away, docker stop does it gracefully)
 docker kill <container id>
 
+15. Docker statistics
+docker stats
