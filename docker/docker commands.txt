@@ -78,4 +78,9 @@ docker rm <condainer id>
   
   18. Build docker image from maven using build in pom
   mvn spring-boot:build-image
+  
+  19. Push docker images to docker hub
+  docker push docker.io/<image name>:<tagname>
+  or
+  docker push docker.io/<image name>  
 
