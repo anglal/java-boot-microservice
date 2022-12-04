@@ -62,3 +62,21 @@ docker stats
 
 16. Remove/delete docker container
 docker rm <condainer id>
+
+17. Springboot build packs/paketo (Using this dockerfile is not needed to build image)
+<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<image>
+					<name>laldockerimage/${project.artifactId}</name>
+					</image>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+  
+  18. 
+
