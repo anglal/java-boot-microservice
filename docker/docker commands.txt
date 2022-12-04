@@ -61,7 +61,7 @@ docker stats
 16. Remove/delete docker container
 docker rm <condainer id>
 
-17. Springboot build packs/paketo (Using this dockerfile is not needed to build image)
+17. Springboot build packs/paketo (Using this dockerfile is not needed to build image Note: image names must be all lowercase)
 <build>
 		<plugins>
 			<plugin>
