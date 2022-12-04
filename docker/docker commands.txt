@@ -57,3 +57,6 @@ docker kill <container id>
 
 15. Docker statistics
 docker stats
+
+16. Remove/delete docker container
+docker rm <condainer id>
