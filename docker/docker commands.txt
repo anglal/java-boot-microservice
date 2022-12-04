@@ -1,7 +1,7 @@
 1. Build docker image in command line
 
 
-docker build . -t lal/docker
+docker build . -t elexad/test
 
 
 2. See docker images
@@ -80,7 +80,12 @@ docker rm <condainer id>
   mvn spring-boot:build-image
   
   19. Push docker images to docker hub
-  docker push docker.io/<image name>:<tagname>
-  or
-  docker push docker.io/<image name>  
+  
+	docker images
+	REPOSITORY    TAG       IMAGE ID       CREATED          SIZE
+	elexad/test   latest    2f8ae22f2ab1   36 minutes ago   420MB
+	
+	
+	docker push elexad/test:latest  
 
+	docker push reponame/test:tagname
