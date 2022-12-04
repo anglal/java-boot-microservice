@@ -48,3 +48,10 @@ docker pause <container id>
 
 12. Unpause a docker
 docker unpause <container id>
+
+13. Inspect docker container
+docker container inspect <container id>
+
+14. Kill docker container(kills right away, docker stop does it gracefully)
+docker kill <container id>
+
