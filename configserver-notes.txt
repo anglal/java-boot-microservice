@@ -1,0 +1,2 @@
+1. localhost:<port number>/<service>/<env name>
+localhost:8810/service2/prod
