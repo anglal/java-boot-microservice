@@ -1,0 +1,13 @@
+version: "3.8"
+
+
+services:
+  service1:
+    image: elexad/test:latest
+    mem_limit: 700m
+    ports:
+      - "8080:8080"
+    networks:
+      - lalnetwork
+networks: 
+  lalnetwork:
