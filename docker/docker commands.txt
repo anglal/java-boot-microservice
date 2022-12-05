@@ -62,7 +62,7 @@ docker stats
 docker rm <condainer id>
 
 17. Springboot build packs/paketo (Using this dockerfile is not needed to build image Note: image names must be all lowercase)
-<build>
+	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -75,11 +75,10 @@ docker rm <condainer id>
 			</plugin>
 		</plugins>
 	</build>
-  
-  18. Build docker image from maven using build in pom
+18. Build docker image from maven using build in pom
   mvn spring-boot:build-image
   
-  19. Push docker images to docker hub
+19. Push docker images to docker hub
   
 	docker images
 	REPOSITORY    TAG       IMAGE ID       CREATED          SIZE
@@ -89,3 +88,5 @@ docker rm <condainer id>
 	docker push elexad/test:latest  
 
 	docker push reponame/test:tagname
+20 . Run docker compose
+	docker-compose up
