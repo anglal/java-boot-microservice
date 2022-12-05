@@ -423,6 +423,23 @@ public static char mostOccurChar(String input) {
 	}
 	
 	
+23. Delete first node of Singly Linked List
+
+	public ListNode deleteFirst() {
+
+		if (null == head) {
+
+			return null;
+		}
+		ListNode temp = head;
+		head = head.next;
+		temp.next = null;
+
+		return temp;
+
+	}	
+	
+	
 22. Find average, highest, lowest and failures in an array list. Pass marks is 35.
 
 	public static ArrayList<Integer> studentReport(Integer[] history, Integer[] geography, Integer[] moral, Integer[] calculus, Integer[] social) {
