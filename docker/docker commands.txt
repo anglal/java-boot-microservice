@@ -90,3 +90,5 @@ docker rm <condainer id>
 	docker push reponame/test:tagname
 20 . Run docker compose
 	docker-compose up
+21. Stop docker compose
+        docker-compose stop
