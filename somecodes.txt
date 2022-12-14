@@ -437,7 +437,34 @@ public static char mostOccurChar(String input) {
 
 		return temp;
 
-	}	
+	}
+
+24. Delete the last node of Singly Linked List
+
+public ListNode deleteLastNode() {
+
+		if (head == null) {
+			return null;
+		}
+
+		if (head.next == null) {
+			ListNode ans = head;
+			head = null;
+			return ans;
+		}
+
+		ListNode last = head;
+		ListNode sLast = null;
+
+		while (last.next != null) {
+			sLast = last;
+			last = last.next;
+		}
+
+		sLast.next = null;
+		return last;
+
+	}
 	
 	
 22. Find average, highest, lowest and failures in an array list. Pass marks is 35.
