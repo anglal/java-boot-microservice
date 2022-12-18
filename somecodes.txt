@@ -465,7 +465,26 @@ public ListNode deleteLastNode() {
 		return last;
 
 	}
-	
+25. Delete a node in a given position.
+
+public void deleteAt(int position) {
+
+		if (position == 1) {
+			head = head.next;
+			return;
+		}
+
+		ListNode previous = head;
+
+		int count = 1;
+
+		while (count < position - 1) {
+			previous = previous.next;
+			count++;
+		}
+
+		previous.next = previous.next.next;
+	}
 	
 22. Find average, highest, lowest and failures in an array list. Pass marks is 35.
 
