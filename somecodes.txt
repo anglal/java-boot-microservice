@@ -504,6 +504,24 @@ public void deleteAt(int position) {
 
 	}
 	
+27. Search an element in Singly Linked List.
+	public boolean findElement(int data) {
+
+		ListNode current = head;
+		while (current != null) {
+
+			if (data == current.data) {
+
+				return true;
+			}
+
+			current = current.next;
+
+		}
+
+		return false;
+	}
+	
 22. Find average, highest, lowest and failures in an array list. Pass marks is 35.
 
 	public static ArrayList<Integer> studentReport(Integer[] history, Integer[] geography, Integer[] moral, Integer[] calculus, Integer[] social) {
