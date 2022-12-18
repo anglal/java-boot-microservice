@@ -521,6 +521,23 @@ public void deleteAt(int position) {
 
 		return false;
 	}
+28. Find the middle of the Singly Linked List.
+
+	public ListNode findMiddle() {
+		if (head == null) {
+			return null;
+		}
+
+		ListNode sp = head;
+		ListNode fp = head;
+
+		while (fp != null && fp.next != null) {
+			sp = sp.next;
+			fp = fp.next.next;
+		}
+
+		return sp;
+	}
 	
 22. Find average, highest, lowest and failures in an array list. Pass marks is 35.
 
