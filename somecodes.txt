@@ -539,6 +539,28 @@ public void deleteAt(int position) {
 		return sp;
 	}
 	
+29. Find the nth element from last node.
+
+	public ListNode findNthElementFromEnd(int position) {
+
+		ListNode ref = head;
+		ListNode cur = head;
+
+		int count = 1;
+
+		while (count < position) {
+			ref = ref.next;
+			count++;
+		}
+
+		while (ref.next != null) {
+			ref = ref.next;
+			cur = cur.next;
+		}
+
+		return cur;
+	}
+	
 22. Find average, highest, lowest and failures in an array list. Pass marks is 35.
 
 	public static ArrayList<Integer> studentReport(Integer[] history, Integer[] geography, Integer[] moral, Integer[] calculus, Integer[] social) {
