@@ -485,6 +485,24 @@ public void deleteAt(int position) {
 
 		previous.next = previous.next.next;
 	}
+26. Find an element in given position in Singly Linked List
+
+	public int findElementAt(int position) {
+
+		ListNode current = head;
+
+		int count = 1;
+
+		while (count < position) {
+
+			current = current.next;
+			count++;
+
+		}
+
+		return current.data;
+
+	}
 	
 22. Find average, highest, lowest and failures in an array list. Pass marks is 35.
 
