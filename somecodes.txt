@@ -597,6 +597,26 @@ public void deleteAt(int position) {
 		previous.next = newNode;
 
 	}
+	
+32. Detect a loop in Singly Linked List.
+
+	public boolean detectLoop(ListNode head) {
+
+		ListNode sp = head;
+		ListNode fp = head;
+		while (fp != null && fp.next != null) {
+			fp = fp.next.next;
+			sp = sp.next;
+
+			if (fp == sp) {
+				return true;
+			}
+		}
+
+		return false;
+
+	}
+
 22. Find average, highest, lowest and failures in an array list. Pass marks is 35.
 
 	public static ArrayList<Integer> studentReport(Integer[] history, Integer[] geography, Integer[] moral, Integer[] calculus, Integer[] social) {
