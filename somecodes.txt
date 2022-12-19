@@ -574,6 +574,29 @@ public void deleteAt(int position) {
 		}
 
 	}
+	
+31. Insert into sorted Singly Linked List.
+
+	public void insertInSortedArray(int data) {
+		ListNode newNode = new ListNode(data);
+		if (data <= head.data) {
+			newNode.next = head;
+			head = newNode;
+			return;
+		}
+
+		ListNode previous = null;
+		ListNode current = head;
+
+		while (current != null && data > current.data) {
+			previous = current;
+			current = current.next;
+		}
+
+		newNode.next = current;
+		previous.next = newNode;
+
+	}
 22. Find average, highest, lowest and failures in an array list. Pass marks is 35.
 
 	public static ArrayList<Integer> studentReport(Integer[] history, Integer[] geography, Integer[] moral, Integer[] calculus, Integer[] social) {
