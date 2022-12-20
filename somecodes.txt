@@ -616,6 +616,36 @@ public void deleteAt(int position) {
 		return false;
 
 	}
+	
+	
+33. Find the start of the loop in Singly Linked list.
+
+	public ListNode findStartOfLoop(ListNode head) {
+		// Detect the loop
+		// And find the start of the loop
+		ListNode sp = head;
+		ListNode fp = head;
+
+		while (fp != null && fp.next != null) {
+			
+			fp = fp.next.next;
+			sp = sp.next;
+			if (sp == fp) {
+				return findStart(sp, head);
+			}
+		}
+
+		return null;
+	}
+
+	private ListNode findStart(ListNode sp, ListNode head) {
+		ListNode temp = head;
+		while (sp != temp) {
+			sp = sp.next;
+			temp = temp.next;
+		}
+		return temp;
+	}
 
 22. Find average, highest, lowest and failures in an array list. Pass marks is 35.
 
