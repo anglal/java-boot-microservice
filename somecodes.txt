@@ -676,6 +676,35 @@ public void deleteAt(int position) {
 		}
 		sp.next = null;		
 		}
+		
+35. Merge two sorted LinkedLists.
+
+	public ListNode mergeSortedLinkedList(ListNode head1, ListNode head2) {
+		ListNode temp = new ListNode(0);
+		ListNode followTemp = temp;
+
+		while (head1 != null && head2 != null) {
+			if (head1.data < head2.data) {
+				followTemp.next = head1;
+				followTemp = head1;
+				head1 = head1.next;
+			} else {
+				followTemp.next = head2;
+				followTemp = head2;
+				head2 = head2.next;
+			}
+
+		}
+		if (head1 == null) {
+			followTemp.next = head2;
+		} else {
+			followTemp.next = head1;
+
+		}
+
+		return temp.next;
+
+	}
 
 22. Find average, highest, lowest and failures in an array list. Pass marks is 35.
 
