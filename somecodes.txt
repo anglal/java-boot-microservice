@@ -646,6 +646,36 @@ public void deleteAt(int position) {
 		}
 		return temp;
 	}
+	
+34. Remove the loop in Singly Linked List.
+
+	public void removeLoop(ListNode head){
+		if(head == null){
+		  return;
+		}
+
+		ListNode sp = head;
+		ListNode fp = head;
+
+		ListNode start = head;
+		while(fp != null &&  fp.next != null){
+		    fp = fp.next.next;
+			sp = sp.next;
+			if(sp == fp){
+			removeLoop(sp, start);
+			return;
+			}
+		    }
+
+		}
+
+		private void removeLoop(ListNode sp, ListNode start){
+			while(sp.next != start.next){
+			sp = sp.next;
+			start = start.next;
+		}
+		sp.next = null;		
+		}
 
 22. Find average, highest, lowest and failures in an array list. Pass marks is 35.
 
