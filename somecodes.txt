@@ -686,14 +686,12 @@ public void deleteAt(int position) {
 		while (head1 != null && head2 != null) {
 			if (head1.data < head2.data) {
 				followTemp.next = head1;
-				followTemp = head1;
 				head1 = head1.next;
 			} else {
 				followTemp.next = head2;
-				followTemp = head2;
 				head2 = head2.next;
 			}
-
+			followTemp = followTemp.next;
 		}
 		if (head1 == null) {
 			followTemp.next = head2;
