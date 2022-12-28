@@ -704,6 +704,38 @@ public void deleteAt(int position) {
 
 	}
 
+36. Add two LinkedList.
+
+	public ListNode addTwoLinkedList(ListNode head1, ListNode head2){
+
+		int carry = 0;
+		ListNode  tail = new ListNode(0);
+		ListNode followTail = tail;
+
+		while(head1 != null || head2 != null){
+			int hd1 = head1 != null ? head1.data : 0;
+			int hd2 = head2 != null? head2.data : 0;
+			int sum = hd1 + hd2 + carry;
+			carry = sum/10;
+			ListNode newNode = new ListNode(sum % 10);
+			if(head1 != null){
+				head1 = head1.next;
+			    }
+			if(head2 != null){
+				head2 = head2.next;
+			    }
+			followTail.next = newNode;
+			followTail = followTail.next;
+		}
+
+		if(carry > 0){
+			ListNode newNode = new ListNode(carry);
+			followTail.next = newNode;
+		}
+
+		return tail.next;
+		}
+
 22. Find average, highest, lowest and failures in an array list. Pass marks is 35.
 
 	public static ArrayList<Integer> studentReport(Integer[] history, Integer[] geography, Integer[] moral, Integer[] calculus, Integer[] social) {
