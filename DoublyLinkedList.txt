@@ -70,3 +70,19 @@ public class DoublyLinkedList {
 		System.out.println("null");
 
 		}
+
+
+# Insert node at beginning
+
+		public void insertAtBeginning(int data) {
+			ListNode newNode = new ListNode(data);
+			if (isEmpty()) {
+				tail = newNode;
+			} else {
+				head.previous = newNode;
+			}
+
+			newNode.next = head;
+			head = newNode;
+			length++;
+		}
