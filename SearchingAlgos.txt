@@ -1,0 +1,21 @@
+# Binary Search
+
+	public static int binarySearch(int[] arr, int target){
+		int begin = 0;
+		int end = arr.length - 1;
+		
+	while( begin <=  end){
+		int found = (begin + end) / 2;
+
+		if(arr[found] == target){
+		return found;	
+		}
+
+		if(target > arr[found]){
+			begin = found +  1;
+		}else{
+			end = found - 1;
+		}
+	}
+	return -1;
+	}
