@@ -19,3 +19,46 @@
 	}
 	return -1;
 	}
+	
+# Find the first and last occurance of the integer in a sorted integer array
+
+	
+
+	public static int binarySearchFirstOccurance(int[] arr, int target){
+		int begin = 0;
+		int end = arr.length - 1;
+		int index = -1;
+	while( begin <=  end){
+		int mid = (begin + end) / 2;
+		
+		if(arr[mid] == target){
+		index = mid;	
+		}
+
+		if(target <= arr[mid]){
+			end = mid -1;
+		}else{
+			begin = mid +1;
+		}
+	}
+	return index;
+	}
+
+	public static int binarySearchLastOccurance(int[] arr, int target) {
+		int index = -1;
+		int begin = 0;
+		int end = arr.length - 1;
+		
+		while(begin <= end) {
+			int mid = (begin + end) / 2;
+			if(arr[mid] == target) {
+				index = mid;
+			}
+			if(target >= arr[mid]){
+				begin = mid + 1;
+			}else {
+				end = mid - 1;
+			}
+		}
+		return index;
+	}
