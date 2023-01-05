@@ -62,3 +62,32 @@
 		}
 		return index;
 	}
+
+# Quick sort
+
+	public static void sort(int [] arr, int begin, int end){
+	if(begin < end) {
+	int p = partition(arr, begin, end);
+	sort(arr, begin, p -1);
+	sort(arr, p+1, end);
+	}
+	}
+
+	public static int partition(int [] arr, int begin, int end){
+        
+		int i = begin;
+		int j = begin;
+		int p = arr[end];
+
+		while( i <= end){
+			if(arr[i] <= p){
+				int temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+				j++;
+			}
+			i++;
+			}
+
+	return j-1;
+	}
