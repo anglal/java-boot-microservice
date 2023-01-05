@@ -91,3 +91,26 @@
 
 	return j-1;
 	}
+
+
+# Odd Even partition
+
+public static void oddEvenPartition(int[] arr) {
+
+		int end = arr.length - 1;
+
+		int i = 0;
+		int j = 0;
+
+		while (i <= end) {
+			if (arr[i] % 2 == 0) {
+				int temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+				j++;
+
+			}
+			i++;
+		}
+
+	}
