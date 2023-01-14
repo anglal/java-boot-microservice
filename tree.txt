@@ -26,11 +26,12 @@ public class Tree{
      
     # Preorder Traversal
 		public void preOrderTraversal(Node root) {
-		if (root != null) {
-			System.out.println(root.data);
-			preOrderTraversal(root.left);
-			preOrderTraversal(root.right);
+		if (root == null) {
+		   return;
 		}
-	}
+		System.out.println(root.data);
+		preOrderTraversal(root.left);
+		preOrderTraversal(root.right);
+	      }
 	   
 	}
