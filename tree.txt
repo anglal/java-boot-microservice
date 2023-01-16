@@ -35,3 +35,27 @@ public class Tree{
 	      }
 	   
 	}
+
+    # Preorder Traversal recursive
+	public void preOrderTraversal(Node root) {
+
+		if (root == null) {
+			return;
+		}
+		Stack<Node> stack = new Stack<>();
+
+		stack.push(root);
+
+		while (!stack.isEmpty()) {
+			Node popedNode = stack.pop();
+			System.out.println(popedNode.data);
+			if (null != popedNode.right) {
+				stack.push(popedNode.right);
+			}
+			if (null != popedNode.left) {
+				stack.push(popedNode.left);
+			}
+
+		}
+
+	}
