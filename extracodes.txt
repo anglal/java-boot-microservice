@@ -141,3 +141,22 @@ class Solution {
         return digit;
     }
 }
+
+# Leetcode Richest Customer Wealth
+
+class Solution {
+    public int maximumWealth(int[][] accounts) {
+        int highestAmount = 0;
+        for(int customer = 0; customer < accounts.length; customer++){
+            int customerAmount = 0;
+            for(int account = 0; account < accounts[customer].length; account++){
+                customerAmount += accounts[customer][account];
+            }
+            if(customerAmount > highestAmount){
+                 highestAmount = customerAmount;
+            }
+
+        }
+        return highestAmount;
+    }
+}
