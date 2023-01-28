@@ -15,3 +15,16 @@ Extra Java Codes
 			return i * i > n;
 
 		}
+		
+# Print armstrong number
+		public static boolean isArmstrong(int n) {
+			int x = n;
+			int sum = 0;
+
+			while (n > 0) {
+				int m = n % 10;
+				n = n / 10;
+				sum += (m * m * m);
+			}
+			return (sum == x);
+		}
