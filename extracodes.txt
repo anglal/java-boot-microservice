@@ -100,3 +100,20 @@ Extra Java Codes
 
 			return new int[] {-1, -1};
 		}
+
+
+# Minimum search 2D array
+
+		public static int findMin2D(int[][] arr) {
+			int min = arr[0][0];
+
+			for (int i = 0; i < arr.length; i++) {
+				for (int j = 1; j < arr[i].length; j++) {
+					if (arr[i][j] < min) {
+						min = arr[i][j];
+					}
+				}
+			}
+
+			return min;
+		}
