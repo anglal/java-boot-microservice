@@ -5,16 +5,14 @@
 		int end = arr.length - 1;
 		
 	while( begin <=  end){
-		int found = (begin + end) / 2;
-
-		if(arr[found] == target){
-		return found;	
-		}
+		int found = begin + (end - begin) / 2;
 
 		if(target > arr[found]){
 			begin = found +  1;
-		}else{
+		}else if(target < arr[found]){
 			end = found - 1;
+		}else{
+			return found;
 		}
 	}
 	return -1;
