@@ -268,6 +268,27 @@ class Solution {
 
 
 # Find position of an element in a sorted array of infinite numbers Amazon
+		public static int findPosition(int[] arr, int target) {
+			int start = 0;
+			int end = 1;
+			while (target > arr[end]) {
+				int temp = end;
+				end = end + 2 * (end - start + 1);
+				start = temp + 1;
+			}
+
+			while (start <= end) {
+				int mid = start + (end - start) / 2;
+				if (target < arr[mid]) {
+					end = mid - 1;
+				} else if (target > arr[mid]) {
+					start = mid + 1;
+				} else {
+					return mid;
+				}
+			}
+			return -1;
+		}
 
 
 # Find the peak in the mountain array leetcode
