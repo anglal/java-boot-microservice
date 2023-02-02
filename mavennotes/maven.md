@@ -17,3 +17,8 @@ Pom has other issues
 - Delete .m2 folder and start over
 
 
+Create effective POM
+- mvn help:effective-pom > pom.xml
+- mvnw help:effective-pom > pom.xml
+
+
