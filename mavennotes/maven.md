@@ -37,3 +37,7 @@ Compile Unit test cases
 Powersehll
 - ./mvnw command
 - ./mvn command
+
+First clean, then compile then test then create jar/war
+- mvnw clean compile test package OR
+- mvnw package
