@@ -41,3 +41,10 @@ Powersehll
 First clean, then compile then test then create jar/war
 - mvnw clean compile test package OR
 - mvnw package
+
+Install the the jar in local maven repo .m2
+- mvn install
+- mvnw install
+
+Order of execution
+- clean, compile, test, package, install
