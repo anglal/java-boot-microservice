@@ -25,3 +25,6 @@ Delete target directory
 - mvn clean
 - mvnw clean
 
+Compile project
+- mvn compile
+- mvnw compile
