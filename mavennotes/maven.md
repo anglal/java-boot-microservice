@@ -28,3 +28,12 @@ Delete target directory
 Compile project
 - mvn compile
 - mvnw compile
+
+Compile Unit test cases
+
+- mvnw compile test
+- mvn compile test
+
+Powersehll
+- ./mvnw command
+- ./mvn command
