@@ -1,10 +1,10 @@
 Build with package from cmd windows
-mvnw clean package -Pdev
+- mvnw clean install package -Pdev
 
 
 Print logs on file instead of console while running springboot app from console
-mvnw clean package -Pdev >> log.txt
-mvnw clean package -Pdev > log.txt
+- mvnw clean package -Pdev >> log.txt
+- mvnw clean package -Pdev > log.txt
 
 Check if the project is valid maven project
 - maven validate
@@ -12,6 +12,8 @@ Check if the project is valid maven project
 
 Troubleshoot
 Pom has access issues to artifactory
-copy password from artifactory to settins in .m2 folder under user
+- copy password from artifactory to settins in .m2 folder under user
+Pom has other issues
+- Delete .m2 folder and start over
 
 
