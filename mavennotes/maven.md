@@ -21,4 +21,7 @@ Create effective POM
 - mvn help:effective-pom > pom.xml
 - mvnw help:effective-pom > pom.xml
 
+Delete target directory
+- mvn clean
+- mvnw clean
 
