@@ -18,6 +18,25 @@
 	return -1;
 	}
 	
+# Binary search with recursion
+	public static int binaryWithRec(int[] arr, int target, int start, int end) {
+
+		int mid = start + (end - start) / 2;
+		if (start > end) {
+			return -1;
+		}
+		if (arr[mid] == target) {
+			return mid;
+		}
+
+		if (target < arr[mid]) {
+			return binaryWithRec(arr, target, start, mid - 1);
+		} else {
+			return binaryWithRec(arr, target, mid + 1, end);
+		}
+
+	}
+
 # Find the first and last occurance of the integer in a sorted integer array
 
 	
