@@ -458,3 +458,16 @@ class Solution {
 	public static boolean odd(int x){
 		return (x & 1) == 1;
 	}
+
+
+
+# Find unique number
+
+	public static int findUnique(int[] arr){
+		// All elements are two,find the one which is only one.
+		int answer = 0;
+		for(int item: arr){
+		answer ^= item;	
+		}
+		return answer;
+	}
