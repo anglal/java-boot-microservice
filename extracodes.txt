@@ -471,3 +471,10 @@ class Solution {
 		}
 		return answer;
 	}
+
+
+# Find ith bit
+
+	public static int findBit(int num, int position) {
+		return (num & (1 << (position - 1))) >> position-1;
+	}
