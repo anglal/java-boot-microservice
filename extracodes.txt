@@ -451,3 +451,10 @@ class Solution {
     return false;
     }
 }
+
+
+# Bitwise operators
+# Find odd number
+	public static boolean odd(int x){
+		return (x & 1) == 1;
+	}
