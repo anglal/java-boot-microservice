@@ -478,3 +478,26 @@ class Solution {
 	public static int findBit(int num, int position) {
 		return (num & (1 << (position - 1))) >> position-1;
 	}
+	
+
+# Set ith bit
+
+	public static int setIthBit(int number, int position){
+		// 1 1 0 0 1
+		// 1 + 8 + 16 = 25
+		// 1 1 1 0 1
+		// 1 + 4 + 8 + 16 = 29
+		return number | (1 << position-1);
+		
+	}
+	
+# Unset ith bit
+
+	public static int resetIthBit(int number, int position){
+
+		// 1 1 0 0 1
+		// 0 1 0 0 0
+		// 0 1 0 0 0
+			return number & (~(1 << (position -1)));
+		
+		}
