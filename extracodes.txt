@@ -540,3 +540,22 @@ sum = 2 ^ n;
 		answer = ((n & (n-1)) == 0);
 		return answer;
 	}
+
+
+# Find the value
+
+	public static int pow(int base, int power){
+	       //  1   1   1 = 7
+	       //  4   2   1
+	       // 5   5   5
+
+		int answer = 1;
+		while(power > 0){
+			if((power & 1) == 1){
+			answer = base * answer;
+			}
+			base = base * base;
+			power = power >> 1;
+		}
+		return  answer;
+	}
