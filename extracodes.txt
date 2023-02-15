@@ -1,20 +1,20 @@
 Extra Java Codes
 
 # Print prime numbers
-		public static boolean isPrime(int n) {
-			if (n <= 1) {
+	public static boolean isPrime(int n) {
+		int count = 2;
+		if (n <= 1) {
+			return false;
+		}
+		while (count * count <= n) {
+			if (n % count == 0) {
 				return false;
 			}
-			int i = 2;
-			while (i * i <= n) {
-				if (n % i == 0) {
-					return false;
-				}
-				i++;
-			}
-			return i * i > n;
-
+			count++;
 		}
+	
+		return true;
+	}
 		
 # Print armstrong number
 		public static boolean isArmstrong(int n) {
