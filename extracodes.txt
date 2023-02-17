@@ -608,3 +608,27 @@ class Solution {
         return image;
     }
 }
+
+
+# Fibonacci number dp
+
+public static BigDecimal fib(int n) {
+		// Store answer yourself, no one else does that for you
+		
+		if (n == 0) {
+			return BigDecimal.ZERO;
+		}
+		if (n == 1) {
+			return BigDecimal.ONE;
+		}
+		// is there a answer???
+		if (store.get(n) != null) {
+			// yes
+			return store.get(n);
+		} 
+			// no find and store for future use
+			
+			BigDecimal val = fib(n - 2).add(fib(n - 1));
+			store.put(n, val);
+			return val;	
+	}  
