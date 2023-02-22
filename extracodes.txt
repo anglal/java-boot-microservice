@@ -632,3 +632,28 @@ public static BigDecimal fib(int n) {
 			store.put(n, val);
 			return val;	
 	}  
+	
+# CanSum dp
+	public static boolean canSum(int m, int[]n, Map<Integer,Boolean>memo) {
+		calls++;
+		if(memo.get(m) != null) {
+			return memo.get(m);
+		}
+		if(m == 0) {
+			return true;
+		}
+		if(m < 0) {
+			return false;
+		}
+		
+		for(int x: n) {
+			int l = m - x;
+			boolean result = canSum(l,n,memo);
+			if(result) {
+				memo.put(m, true);
+				return true;
+			}
+		}
+		memo.put(m, false);
+		return false;
+	}
