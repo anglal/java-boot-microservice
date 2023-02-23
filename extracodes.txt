@@ -684,3 +684,29 @@ public static BigDecimal fib(int n) {
 		memo.put(m, null);
 		return null;
 	}
+	
+# Best sum recursive
+	public static List<Integer>bestSum(int m, int[] n){
+		calls++;
+		if(m == 0) {
+			return new ArrayList<Integer>();
+		}
+		if(m < 0) {
+			return null;
+		}
+		
+		List<Integer> bestResult = null;
+		
+		for(int l: n) {
+			List<Integer> result = bestSum(m-l, n);
+			if(result != null) {
+				result.add(l);
+				if(bestResult == null || bestResult.size() > result.size()) {
+					bestResult = result;
+				}
+			}
+		}
+		
+		
+		return bestResult;
+	}
