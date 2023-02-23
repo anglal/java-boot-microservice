@@ -657,3 +657,30 @@ public static BigDecimal fib(int n) {
 		memo.put(m, false);
 		return false;
 	}
+
+
+# How Sun dp
+	public static List<Integer> howSum(int m, int[]n, Map<Integer,List<Integer>>memo) {
+		calls++;
+		if(memo.containsKey(m)) {
+			return memo.get(m);
+		}
+		if(m == 0) {
+			return new ArrayList<Integer>();
+		}
+		if(m < 0) {
+			return null;
+		}
+		
+		for(int x: n) {
+			int l = m - x;
+			List<Integer> result = howSum(l,n, memo);
+			if(result != null) {
+				result.add(x);
+				memo.put(m, result);
+				return result;
+			}
+		}
+		memo.put(m, null);
+		return null;
+	}
