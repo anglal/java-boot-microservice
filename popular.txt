@@ -7,11 +7,11 @@ public static boolean anagram(String input1, String input2) {
 			return false;
 		}
 
-		int[] tempArr = new int[58];
+		int[] tempArr = new int['z' -'a' + 1];
 
 		for (int i = 0; i < input1.length(); i++) {
-			tempArr[input1.charAt(i) - 'A']++;
-			tempArr[input1.charAt(i) - 'A']--;
+			tempArr[input1.charAt(i) - 'a']++;
+			tempArr[input2.charAt(i) - 'a']--;
 		}
 
 		for (int i = 0; i < input1.length(); i++) {
