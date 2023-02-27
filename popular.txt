@@ -10,12 +10,12 @@ public static boolean anagram(String input1, String input2) {
 		int[] tempArr = new int['z' -'a' + 1];
 
 		for (int i = 0; i < input1.length(); i++) {
-			tempArr[input1.charAt(i) - 'a']++;
-			tempArr[input2.charAt(i) - 'a']--;
+			tempArr[input1.toLowerCase().charAt(i) - 'a']++;
+			tempArr[input2.toLowerCase().charAt(i) - 'a']--;
 		}
 
 		for (int i = 0; i < input1.length(); i++) {
-			if (tempArr[input1.charAt(i) - 'a'] != 0)
+			if (tempArr[input1.toLowerCase().charAt(i) - 'a'] != 0)
 				return false;
 		}
 
