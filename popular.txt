@@ -59,3 +59,22 @@ public static boolean anagram(String input1, String input2) {
 		}
 		return sum == 1;
 	}   
+
+
+# CCI
+# Arrays and Srings 
+# Implement an algorithm to determine if a string has all unique characters.
+	public static boolean uniqueChar(String str) {
+		String prefix = "";
+		for (int i = 0; i < str.length(); i++) {
+			char curChar = str.charAt(i);
+			String rem = prefix + str.substring(i+1);
+			for (int j = 0; j < rem.length(); j++) {
+				if (curChar == rem.charAt(j)) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+
