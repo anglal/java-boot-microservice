@@ -79,3 +79,20 @@ public static boolean anagram(String input1, String input2) {
 		return true;
 	}
 
+
+# CCI
+# Compressed string(Brute force)
+
+	public static String compress(String str) {
+		String answer = "";
+		int count = 0;
+		for (int i = 0; i < str.length(); i++) {
+			count++;
+			if (i + 1 >= str.length() || str.charAt(i) != str.charAt(i + 1)) {
+				answer += "" + str.charAt(i) + count;
+				count = 0;
+			}
+		}
+
+		return answer.length() < str.length() ? answer : str;
+	}
