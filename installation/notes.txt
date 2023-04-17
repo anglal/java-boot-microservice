@@ -1,0 +1,3 @@
+Find the location of installed application in mac
+which <app>
+- which node
