@@ -3,7 +3,9 @@
 - pull the remote branch : git pull origin branchname 
 
 # Check out / fetcg the remote branch when local branch has not been created yet
--git checkout -b localBranch remote branch
+
+(local branch: feature/localBranch, remote: remotes/origin/feature/localBranch)
+-git checkout -b feature/localBranch origin/feature/localBranch
 
 # Create a local branch
 git checkout -b branch1
