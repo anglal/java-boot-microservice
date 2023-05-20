@@ -1,0 +1,5 @@
+How to set up environmental variables
+Create nano file
+nano ~/.zshrc
+Then set path as below(this is Kafka path)
+PATH="$PATH:/Users/lalangdembe/Downloads/kafka_2.12-3.0.0/bin"
