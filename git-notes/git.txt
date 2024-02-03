@@ -101,3 +101,11 @@ git stash pop
 
 # Show untracked status
 git status -u
+
+# Add remote repository
+git remote add origin <git url> 
+   -> origin is alias, that can be used again in the future
+git remote -v
+   -> to validate the local and remote repositories
+git push origin master
+   -> push to master branch
