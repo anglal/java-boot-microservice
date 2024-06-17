@@ -109,3 +109,8 @@ git remote -v
    -> to validate the local and remote repositories
 git push origin master
    -> push to master branch
+in below case:
+Set upstream
+   -> git push --set-upstream origin main
+Pull(fetch & merge) unrelated histories
+   -> git pull origin main --allow-unrelated-histories
