@@ -105,6 +105,18 @@ steps:
 - Runtime Stack: .NET 6 (LTS)
 - OS: Windows
 - Rest fill according to need
+- Check the app service, if ip is blocked, add the ip
+
+## Assign access to service principal to use App service ##
+- Go to app service
+- Access control(IAM)
+- Role Assignment
+- Add role assignment
+- Select "Contributor" role from "Priviledged administrator roles"
+- Assign access to: User, group, or service principal
+- "+ Select members"
+- Search service principal name recently created
+- Review and assign
 
 ## Create a release pipeline ##
 - Go to releases
@@ -119,4 +131,9 @@ steps:
 - Azure subscription: select the service connection
 - Add deployment job and task by clicking "1 job, 1 task"
 - App type: Web App on Windows
-- 
+- App service name: paste the app service name recently created
+- Save in "All pipelines"
+- Edit the name of release pipeline
+- Run the pipeline by creating a release
+  
+  
