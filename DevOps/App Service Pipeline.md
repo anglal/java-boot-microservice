@@ -6,6 +6,7 @@
 
 ## Create a build pipeline ##
 - Use GitHub as repository and select appropriate respository and authetnicate
+- When creating pipeline, it will create a sevice connection to connect to GitHub
 - In pipeline, select ASP.NET core(.NET Framework)
 - It will generate the build task as below
 ```
