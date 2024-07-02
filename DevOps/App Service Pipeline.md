@@ -57,3 +57,14 @@ steps:
 ```
 
 ##  Create a manual Release pipeline ##
+- Go to releases
+- New pipeline
+- On the right corner, template, select "Azure App Service deployment"
+- Name the stage
+- Configure artifact by clicking "Add an artifact"
+- Seclet source type as "Build" as build pipeline contains the artifact
+- Select corresponding project andd source
+- Add
+- To activate continuous deployment right after build, click on lightening symbol and enable
+- Add deployment job and task by clicking "1 job, 1 task"
+  
