@@ -43,4 +43,14 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+```
+- To publish the artifact to App service put the cursor at the and of the pipeline and click on show assistant and searh for "Publish build artifacts"
+- It will create below task:
+```
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
 ```
