@@ -1,1 +1,9 @@
 DevOps Notes
+
+Deploy .dot net app in App Service using Azure DevOps pipeline
+
+A. Manual pipeline
+
+1. Create a repo and push the code to the repo
+2. Create build pipeline
+3. 
