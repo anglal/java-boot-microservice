@@ -62,6 +62,7 @@ steps:
 - Service Principal(Create manually if the user in devOps does not have subscription to Azure resources), otherwise it will be created automatically by azure devops just using the subscription
   
 - Service Connection to Azure Resources
+- App Service
 
 ## Create Service Principal manually ##
 - Use this approach if the user in DevOps does not have subscription to Azure Resources
@@ -98,6 +99,13 @@ steps:
 - Grant access to all pipelines if this service connection is intended to be used by all pipelines
 - Save without verification if it does not verify
 
+## Create an app service ##
+- In the Azure Portal, search "App Services" and create Web App
+- Publish: code
+- Runtime Stack: .NET 6 (LTS)
+- OS: Windows
+- Rest fill according to need
+
 ## Create a release pipeline ##
 - Go to releases
 - New pipeline
@@ -108,5 +116,7 @@ steps:
 - Select corresponding project andd source
 - Add
 - To activate continuous deployment right after build, click on lightening symbol and enable
+- Azure subscription: select the service connection
 - Add deployment job and task by clicking "1 job, 1 task"
-  
+- App type: Web App on Windows
+- 
