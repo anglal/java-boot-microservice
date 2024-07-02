@@ -57,6 +57,48 @@ steps:
 ```
 
 ##  Create a manual Release pipeline ##
+
+## Pre requisites ##
+- Service Principal(Create manually if the user in devOps does not have subscription to Azure resources), otherwise it will be created automatically by azure devops just using the subscription
+  
+- Service Connection to Azure Resources
+
+## Create Service Principal manually ##
+- Use this approach if the user in DevOps does not have subscription to Azure Resources
+- Login to Azure portal
+- Search for "App registrations"
+- "+ New registration"
+- Name: Name of the service principal
+- Supported account types: Multitenant if it needs to be accessed from different tenant, eg. the user in Azure DevOps does not have subscription to Azure resources, if the user does, use Single tenant)
+- Redirect URI is optional
+- Register
+
+## Create Service Principal key (AKA secret) ##
+- Go to recently created service principal/application
+- In "Client credentials", "Add a certificate or secret"
+- "New client secret"
+- Add Description
+- Add
+
+## Create Service Connection to Azure Resources ##
+- Go to organization, then go to project
+- Go to "project settings" left bottom corner
+- Under Pipelines, go to service connections
+- New service connection
+- Choose Azure Resource Manager as service connection type
+- Authentication Method, select "Service principal(manual)" if the user does not have subscription to Azure Resources, automatic if the user has subscrition
+- Environment : Azure Cloud
+- Subscription id: subscription id of azure resource where app service and other resources are residing
+- Subscription name: subscription name of the azure resource where app service and other resources are residing
+- Service Principal Id : Go to app registration and find the service principal/applications and use Application(client) ID.
+- Service Principal key: Got to recently created Service Principal/Application and copy the secret
+- Tenant id: Copy from recently created Service Principal
+- Verify: Sometimes it does not verify, that's okay as long as all the values are supplied as given above
+- Service connection name: Give a name
+- Grant access to all pipelines if this service connection is intended to be used by all pipelines
+- Save without verification if it does not verify
+
+## Create a release pipeline ##
 - Go to releases
 - New pipeline
 - On the right corner, template, select "Azure App Service deployment"
