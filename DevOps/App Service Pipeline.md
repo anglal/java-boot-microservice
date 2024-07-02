@@ -4,7 +4,7 @@
 1. GitHub/ Azure DevOps Git
 2. Cloud Microsoft Azure
 
-## Create a pipeline ##
+## Create a build pipeline ##
 - Use GitHub as repository and select appropriate respository and authetnicate
 - In pipeline, select ASP.NET core(.NET Framework)
 - It will generate the build task as below
@@ -54,3 +54,5 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
 ```
+
+##  Create a manual Release pipeline ##
