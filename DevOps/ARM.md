@@ -7,5 +7,5 @@ az login
 ### Create Resource Group using below command
 
 ```
-
+az group create -l westus -n MyResourceGroup
 ```
