@@ -51,3 +51,9 @@ arm!
         }
     }],
 ```
+### Change "name", "displayName", "sku" and tags as per need and save the file
+### Run following command from Azure cli to create a storage account
+```
+az deployment group create --name <deployment-name> --resource-group <resource-group-name> --template-file my-template.json
+
+```
