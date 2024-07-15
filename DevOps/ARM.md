@@ -32,8 +32,8 @@ arm!
 ```
 
 ### Edit resources
--Inside resources type arm-storage and hit "enter"
--It will create below contents in "resources"
+- Inside resources type arm-storage and hit "enter"
+- It will create below contents in "resources"
 
 ```
 "resources": [{
