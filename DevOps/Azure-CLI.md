@@ -16,5 +16,7 @@ az account set --subscription <subscription_id_or_name>
 az account show
 
 ### List resource groups
-```az group list --output table```
+```
+az group list --output table
+```
 
