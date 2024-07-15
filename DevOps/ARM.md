@@ -4,3 +4,8 @@
 ```
 az login
 ```
+### Create Resource Group using below command
+
+```
+
+```
