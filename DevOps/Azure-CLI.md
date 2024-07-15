@@ -20,3 +20,8 @@ az account show
 az group list --output table
 ```
 
+### List all front doors
+```
+az network front-door list --resource-group myresourcegroup --output table
+```
+
