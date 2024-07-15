@@ -30,3 +30,24 @@ arm!
 }
 
 ```
+
+### Edit resources
+-Inside resources type arm-storage and hit "enter"
+-It will create below contents in "resources"
+
+```
+"resources": [{
+        "name": "storageaccount1",
+        "type": "Microsoft.Storage/storageAccounts",
+        "apiVersion": "2023-01-01",
+        "tags": {
+            "displayName": "storageaccount1"
+        },
+        "location": "[resourceGroup().location]",
+        "kind": "StorageV2",
+        "sku": {
+            "name": "Premium_LRS",
+            "tier": "Premium"
+        }
+    }],
+```
