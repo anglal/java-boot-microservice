@@ -197,5 +197,3 @@ az deployment group create --name <deployment-name> --resource-group <resource-g
     "outputs": {}
 }
   ```
-
-
