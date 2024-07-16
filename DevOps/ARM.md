@@ -129,6 +129,73 @@ az deployment group create --name <deployment-name> --resource-group <resource-g
         }
     }],
     "outputs": {}
+}```
+
+### Add Variables (for values that will be repeatedly used) as below:
+
+```
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {"skutier": {
+        "type": "string",
+        "metadata": {
+            "description": "parameter for sku name"
+        },
+        "defaultValue":"Premium_LRS",
+        "allowedValues":["Premium", "Standard"]
+    }},
+    "functions": [],
+    "variables": {"name": "mystorageaccount"},
+    "resources": [{
+        "name": "[variables('name')]",
+        "type": "Microsoft.Storage/storageAccounts",
+        "apiVersion": "2023-01-01",
+        "tags": {
+            "displayName": "[variables('name')]"
+        },
+        "location": "[resourceGroup().location]",
+        "kind": "StorageV2",
+        "sku": {
+            "name": "Premium_LRS",
+            "tier": "[parameters('skutier')]"
+        }
+    }],
+    "outputs": {}
+}
+```
+### Add multiple resources by putting comma in resources and typing "arm"
+- Here new app gateway resource is added
+  ```
+  {
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {"skutier": {
+        "type": "string",
+        "metadata": {
+            "description": "parameter for sku name"
+        },
+        "defaultValue":"Premium_LRS",
+        "allowedValues":["Premium", "Standard"]
+    }},
+    "functions": [],
+    "variables": {"name": "mystorageaccount"},
+    "resources": [{
+        "name": "[variables('name')]",
+        "type": "Microsoft.Storage/storageAccounts",
+        "apiVersion": "2023-01-01",
+        "tags": {
+            "displayName": "[variables('name')]"
+        },
+        "location": "[resourceGroup().location]",
+        "kind": "StorageV2",
+        "sku": {
+            "name": "Premium_LRS",
+            "tier": "[parameters('skutier')]"
+        }
+    }],
+    "outputs": {}
 }
   ```
-### Add Variable names
+
+
