@@ -52,8 +52,39 @@ arm!
     }],
 ```
 ### Change "name", "displayName", "sku" and tags as per need and save the file
+
+### After configuring resources
+```
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {},
+    "functions": [],
+    "variables": {},
+    "resources": [{
+        "name": "storageaccount1",
+        "type": "Microsoft.Storage/storageAccounts",
+        "apiVersion": "2023-01-01",
+        "tags": {
+            "displayName": "storageaccount1"
+        },
+        "location": "[resourceGroup().location]",
+        "kind": "StorageV2",
+        "sku": {
+            "name": "Premium_LRS",
+            "tier": "Premium"
+        }
+    }],
+    "outputs": {}
+}
+```
 ### Run following command from Azure cli to create a storage account
 ```
 az deployment group create --name <deployment-name> --resource-group <resource-group-name> --template-file my-template.json
 
 ```
+
+### Add Parameters
+
+
+
