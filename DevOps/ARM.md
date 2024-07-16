@@ -85,6 +85,50 @@ az deployment group create --name <deployment-name> --resource-group <resource-g
 ```
 
 ### Add Parameters
+- Inside parameters, type "new" and hit "enter"
+- It will give below and add and configure parameters according to need
+  ```
+      "parameters": {"parameter1": {
+        "type": "string",
+        "metadata": {
+            "description": "description"
+        }
+    }},
 
+  ```
 
+  - I will create parameters for sku "tier" and and update as below.
+  
+
+  ```
+  {
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {"skutier": {
+        "type": "string",
+        "metadata": {
+            "description": "parameter for sku name"
+        },
+        "defaultValue":"Premium_LRS",
+        "allowedValues":["Premium", "Standard"]
+    }},
+    "functions": [],
+    "variables": {},
+    "resources": [{
+        "name": "storageaccount1",
+        "type": "Microsoft.Storage/storageAccounts",
+        "apiVersion": "2023-01-01",
+        "tags": {
+            "displayName": "storageaccount1"
+        },
+        "location": "[resourceGroup().location]",
+        "kind": "StorageV2",
+        "sku": {
+            "name": "Premium_LRS",
+            "tier": "[parameters('skutier')]"
+        }
+    }],
+    "outputs": {}
+}
+  ```
 
