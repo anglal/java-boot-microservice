@@ -3,9 +3,9 @@
 - TestVnet - 192.168.0.0/16
 - FrontEnd Subnet - 192.168.1.0/24
 - BackEnd Subnet- 192.168.2.0/24
-- FrontEnd Subnet has two web servers
+- FrontEnd Subnet has two web servers, 1. RDP server, 2. Web Server
 - Backend Subment has two database servers
-- frontendnsg
+- frontendnsg (RDP, TCP, )
 - backendnsg
   
 ### Steps
@@ -27,4 +27,21 @@
   Go to Vnet -> subnets -> Network security group, then select the nsg
 
 ### Note: nsg can be used multiple times in the sam vnet or other vnets, it can be shared
+
+### Create inbound rules in frontend nsg to allow rdp and http traffic
+- Go to Network Security Group
+### RDP
+- Go to inbound rules
+- Add
+- Source: Any(Any machine can connect)
+- Port: * (Any port)
+- Destination: Any (Any machine)
+- Service: RDP
+- Action: Allow
+- Priority: 1000
+- Name : As your choice
+### HTTP
+- Service: HTTP
+  
+  
  
