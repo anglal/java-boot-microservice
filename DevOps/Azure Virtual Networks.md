@@ -5,8 +5,8 @@
 - BackEnd Subnet- 192.168.2.0/24
 - FrontEnd Subnet has two web servers, 1. RDP server, 2. Web Server
 - Backend Subment has two database servers
-- frontendnsg (RDP, TCP, )
-- backendnsg
+- frontendnsg (RDP, TCP)
+- backendnsg (SQL, RDP)
   
 ### Steps
 ### Create the virtual network
