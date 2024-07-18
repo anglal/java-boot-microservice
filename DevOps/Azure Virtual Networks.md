@@ -26,7 +26,7 @@
 - From subnets
   Go to Vnet -> subnets -> Network security group, then select the nsg
 
-### Note: nsg can be used multiple times in the sam vnet or other vnets, it can be shared
+#### Note: nsg can be used multiple times in the sam vnet or other vnets, it can be shared
 
 ### Create inbound rules in frontend nsg to allow rdp and http traffic
 - Go to Network Security Group
@@ -42,6 +42,22 @@
 - Name : As your choice
 ### HTTP
 - Service: HTTP
+
+### Create inbound rules in backend nsg to allow rdp and Mysql and deny all outgoing traffic to internet
+- Create as created above, for service select Ms SQL
+
+### Create outbound rule to block all traffic to internet
+- Got to Outbound security rules
+- Add
+- Source: Any
+- Destination: Service Tag
+- Destination Service tag: Internet
+- Service: Custom
+- Destination port ranges: *
+- Protocol : Any
+- Priority: Less than "AllowInternetOutBound", eg. 1200
+
+
   
   
  
