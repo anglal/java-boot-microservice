@@ -75,8 +75,25 @@
 - Go to virtual machine
 - Go to connect
 - Download and open RDP file
-- 
+- Connect 
+- Install IIS webserver follow below:
+- Go to serever manger/ could be already open
+- Go to "Add roles and features"
+- Installation Type: Role-based or feature-based installation
+- Server Selection: Select a server from the server pool
+- Server Roles: Web Server (IIS)
+- Add features
+- All next remainins: Default
+- Install
+- Wait until installation is complete.
+- Once installation is complete, the inetpub/wwwroot will be created in C drive
+- wwwroot will have websites/pages, default of the website
 
+### Access the website
+- http://public ip of vm -> http://123.234.12.89
+- Or http://public ip of vm:<port> -> http://123.234.89:80
+- You can make changes to the file named "iisstart" png file and test the changes
+  
 
   
   
