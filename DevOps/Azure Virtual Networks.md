@@ -57,6 +57,26 @@
 - Protocol : Any
 - Priority: Less than "AllowInternetOutBound", eg. 1200
 
+### Create Virtual Machine 
+- Image: Windows Server 2022
+- Architecture: X64
+- Size: - 2 vcpus
+- Username: username
+- Password: password
+- Public inbound ports: None (nsg attached with the subnet allows RDP, so no need to Allow here)
+- Select the virtual network
+- Select the subnet
+- Public IP: Create new public ip - basic,static
+- Delete public IP and NIC when VM is deleted: check
+- Enable accelerated networking: Uncheck
+- Everything : Default
+
+### Connect to Virtual Machine
+- Go to virtual machine
+- Go to connect
+- Download and open RDP file
+- 
+
 
   
   
