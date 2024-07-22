@@ -93,6 +93,20 @@
 - http://public ip of vm -> http://123.234.12.89
 - Or http://public ip of vm:<port> -> http://123.234.89:80
 - You can make changes to the file named "iisstart" png file and test the changes
+
+### Why are we able to accesss http?
+- Because Virtual machine is in Vnet and using front end subnet, which has a nsg rule open for http
+- Delete and test, you will not have access to http server in VM
+
+### Where can NSG's be applied?
+- NIC and Subnet
+
+### Configure dns name in NIC
+- Look for "Public IP addresses" in Azure Portal
+- Find the public IP that is attached with NIC of the virtual machine
+- Go to configuration
+- Under DNS name label, give unique dns name
+  
   
 
   
