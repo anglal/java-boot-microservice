@@ -106,7 +106,25 @@
 - Find the public IP that is attached with NIC of the virtual machine
 - Go to configuration
 - Under DNS name label, give unique dns name
-  
+
+### NSG at NIC level
+- Go to Network Interface of the virtual machine
+- Go to settings
+- Go to Network Security Group
+- Select the NSG
+
+Another way of associating NSG to NIC
+- Go to Network Security Groups
+- Go to Settings
+- Go to Network interfaces
+- Associate
+- Select the specific NIC
+### What happens if there are two NSG's, one at subnet level and one at NIC level?
+- In above case it will fail because traffic is allowed by subnet but not by NIC.
+- Both needs to allow or deny
+
+### NIC is more specific and inner granular whereas subnet is more broader and outer
+
   
 
   
