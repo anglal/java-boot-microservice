@@ -56,7 +56,7 @@
 - Destination port ranges: *
 - Protocol : Any
 - Priority: Less than "AllowInternetOutBound", eg. 1200
-
+  
 ### Create Virtual Machine 
 - Image: Windows Server 2022
 - Architecture: X64
@@ -67,6 +67,7 @@
 - Select the virtual network
 - Select the subnet
 - Public IP: Create new public ip - basic,static
+- NIC network security group: None (as it is already attached with subnet NSG)
 - Delete public IP and NIC when VM is deleted: check
 - Enable accelerated networking: Uncheck
 - Everything : Default
@@ -125,8 +126,12 @@ Another way of associating NSG to NIC
 
 ### NIC is more specific and inner granular whereas subnet is more broader and outer
 
-  
+### Create new virtual machine as above for backend and attach the backend subnet
 
+### Is traffic between vnet to vnet allowed?
+- Yes
+- Can use private ip or public ip both
+  
   
   
  
