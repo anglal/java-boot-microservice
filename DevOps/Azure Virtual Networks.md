@@ -132,6 +132,11 @@ Another way of associating NSG to NIC
 - Yes
 - Can use private ip or public ip both
   
-  
+### Network Watcher
+- In portal, search for "Network Watcher"
+- Go to "NSG diagnostics"
+- Virtual Machine
+
+### Network Watcher is very useful for connection troubleshooting
   
  
