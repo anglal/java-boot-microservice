@@ -67,7 +67,8 @@
 - Select the virtual network
 - Select the subnet
 - Public IP: Create new public ip - basic,static
-- NIC network security group: None (as it is already attached with subnet NSG)
+- NIC network security group: Basic
+- Public inbound ports: None (as it is already attached with subnet NSG)
 - Delete public IP and NIC when VM is deleted: check
 - Enable accelerated networking: Uncheck
 - Everything : Default
@@ -138,5 +139,21 @@ Another way of associating NSG to NIC
 - Virtual Machine
 
 ### Network Watcher is very useful for connection troubleshooting
+- It does not exactly tell if the traffic is really flow, it just shows based on the rules
+### Application Security Group(ASG)
+- To group similar applications under one group and apply same rule to all members of the group
+- So that every individual ip need not be configured, as long as it falls unde an ASG, ASG can be configured
+
+### Create ASG's
+  1. webservers-asg
+  2. databaseservers-asg
+### How to create an ASG
+  Go to Application Security Groups and follow the instructions
+### Create VM's (they belong to diffirent application groups, attach them to their respective ASG's)
+### ASG's will be used in NSG's and then they are usde in subnets
+### Attach ASG's to VM's
+- Go to virtual machine
+- 
+     
   
  
