@@ -1,7 +1,7 @@
 ### This build pipeline is for ADO pipeline
 ### It just copies files and produces an artifact to be deployed by release pipeline
 
-
+```
 trigger:
   - main
 pool:
@@ -16,3 +16,5 @@ steps:
       PathtoPublish: '$(Build.ArtifactStagingDirectory)'
       artifactName: 'drop'
       publishLocattion: 'Container'
+
+```
