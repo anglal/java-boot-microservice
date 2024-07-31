@@ -91,6 +91,13 @@
 - Once installation is complete, the inetpub/wwwroot will be created in C drive
 - wwwroot will have websites/pages, default of the website
 
+### How to change subnet bin VM?
+- Go to network settings from VM
+- Go to Network interface/IP configuration
+- IP configurations
+- IP Settings
+- Subnet -> select the subnet
+
 ### Access the website
 - http://public ip of vm -> http://123.234.12.89
 - Or http://public ip of vm:<port> -> http://123.234.89:80
