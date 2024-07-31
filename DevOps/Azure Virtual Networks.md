@@ -67,7 +67,7 @@
 - Select the virtual network
 - Select the subnet
 - Public IP: Create new public ip - basic,static
-- NIC network security group: Basic
+- NIC network security group: Basic Or None 
 - Public inbound ports: None (as it is already attached with subnet NSG)
 - Delete public IP and NIC when VM is deleted: check
 - Enable accelerated networking: Uncheck
