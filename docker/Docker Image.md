@@ -4,3 +4,4 @@
   ```
     az acr build --image sample/hello-world:v1 --registry mycontainerregistry008 --file Dockerfile .
   ```
+### Link to Microsoft doc: https://learn.microsoft.com/en-us/azure/container-registry/container-registry-quickstart-task-cli
