@@ -52,7 +52,7 @@ docker build -t my-app:1 .
 ### If Dockerfile is in my-files/dev ###
 
 ```
-docker build -f my-files/Dockerfile -t my-app my-files/
+docker build -f my-files/Dockerfile -t my-app:1 my-files/
 
 ```
 
