@@ -49,12 +49,21 @@ CMD ["nginx", "-g", "daemon off;"]
 docker build -t my-app:1 .
 
 ```
-### If Dockerfile is in my-files/dev ###
+### If Dockerfile is in my-files/development ###
+
 
 ```
-docker build -f my-files/Dockerfile -t my-app:1 my-files/
+# Go to parent of my-files
+# Build the Docker image specifying the Dockerfile location and build context
+docker build -f my-files/development/Dockerfile -t my-react-app my-files/
+
+# Run the Docker container
+docker run -p 3000:80 my-react-app
+
 
 ```
+
+
 
 ### Run the image ###
 
