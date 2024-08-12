@@ -9,7 +9,7 @@ npm start
 ### Create a Dockerfile for React UI ###
 
 - Filename "Dockerfile"
-- Paste following contents to "my-files/development/Dockerfile"
+- Paste following contents to "my-app/development/Dockerfile"
 ```
 # Step 1: Use Node.js as the base image
 FROM node:18 AS build
@@ -54,7 +54,7 @@ docker build -t my-app:1 .
 ```
 # Go to parent of my-files
 # Build the Docker image specifying the Dockerfile location and build context
-docker build -f my-files/development/Dockerfile -t my-react-app my-files/
+docker build -f my-app/development/Dockerfile -t my-react-app my-app/
 
 # Run the Docker container
 docker run -p 3000:80 my-react-app
