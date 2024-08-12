@@ -43,3 +43,16 @@ CMD ["nginx", "-g", "daemon off;"]
 
 
 ```
+
+### Build Image with version 1 ###
+```
+docker build -t my-app:1 .
+
+```
+
+### Run the image ###
+
+```
+docker run -p 3000:80 my-app:1
+
+```
