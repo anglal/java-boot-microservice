@@ -18,13 +18,13 @@ FROM node:18 AS build
 WORKDIR /app
 
 # Step 3: Copy package.json and package-lock.json
-COPY my-files/package*.json ./
+COPY my-app/package*.json ./
 
 # Step 4: Install dependencies
 RUN npm install
 
 # Step 5: Copy the rest of the application code
-COPY my-files/ .
+COPY my-app/ .
 
 # Step 6: Build the React app
 RUN npm run build
@@ -43,26 +43,21 @@ CMD ["nginx", "-g", "daemon off;"]
 
 ```
 
-### Build Image with version 1 ###
+### Build Image with version 1 if Dockerfile is in the same directory the source code is in ###
 ```
 docker build -t my-app:1 .
 
 ```
-### If Dockerfile is in my-files/development ###
+### If Dockerfile is in my-app/development ###
 
 
 ```
 # Go to parent of my-files
 # Build the Docker image specifying the Dockerfile location and build context
-docker build -f my-app/development/Dockerfile -t my-react-app my-app/
-
-# Run the Docker container
-docker run -p 3000:80 my-react-app
+docker build -f my-app/development/Dockerfile -t my-app:1 my-app/
 
 
 ```
-
-
 
 ### Run the image ###
 
