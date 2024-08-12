@@ -9,7 +9,7 @@ npm start
 ### Create a Dockerfile for React UI ###
 
 - Filename "Dockerfile"
-- Paste following contents to "Dockerfile"
+- Paste following contents to "my-files/development/Dockerfile"
 ```
 # Step 1: Use Node.js as the base image
 FROM node:18 AS build
@@ -18,13 +18,13 @@ FROM node:18 AS build
 WORKDIR /app
 
 # Step 3: Copy package.json and package-lock.json
-COPY package*.json ./
+COPY my-files/package*.json ./
 
 # Step 4: Install dependencies
 RUN npm install
 
 # Step 5: Copy the rest of the application code
-COPY . .
+COPY my-files/ .
 
 # Step 6: Build the React app
 RUN npm run build
@@ -40,7 +40,6 @@ EXPOSE 80
 
 # Step 10: Start Nginx server
 CMD ["nginx", "-g", "daemon off;"]
-
 
 ```
 
