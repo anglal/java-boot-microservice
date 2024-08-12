@@ -11,7 +11,7 @@ npm start
 - Filename "Dockerfile"
 - Paste following contents to "Dockerfile"
 ```
-  # Step 1: Use Node.js as the base image
+# Step 1: Use Node.js as the base image
 FROM node:18 AS build
 
 # Step 2: Set working directory
