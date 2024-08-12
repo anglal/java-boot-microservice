@@ -49,6 +49,12 @@ CMD ["nginx", "-g", "daemon off;"]
 docker build -t my-app:1 .
 
 ```
+### If Dockerfile is in my-files/dev ###
+
+```
+docker build -f my-files/Dockerfile -t my-app my-files/
+
+```
 
 ### Run the image ###
 
