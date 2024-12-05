@@ -180,9 +180,3 @@ spec:
 41.
 42. kubectl set image deployment ng-dep nginx=k8slab/nginx:2.0
     
-    
-    
-
-
-
-   
