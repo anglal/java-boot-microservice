@@ -177,6 +177,56 @@ spec:
 39. Get services
     kubectl get svc
 40. Open browser and browse the external ip to access the service
-41.
-42. kubectl set image deployment ng-dep nginx=k8slab/nginx:2.0
+41. Update image version using command:
+    ```
+    kubectl set image deployment nginx-deployment nginx=nginx:1.27.3
+
+    ```
+    deployment name -> nginx-deployment
+    Updated image name -> nginx:2.0
+    Name of the container -> nginx
+    
+    ![image](https://github.com/user-attachments/assets/40c41759-2074-4d8e-b140-61b0f6745832)
+
+    This image will change to nginx:1.27.3
+42. Describe deployment
+    kubectl describe deployment nginx-deployment
+43. Show everything
+    kubectl get all
+
+    Notice that the old replica set still exists, even though it has 0 Desired Pods.
+    ![image](https://github.com/user-attachments/assets/9d7540d7-0491-47f3-92d6-13025a430790)
+44. Describe command on that old ReplicaSet.
+    ```
+    kubectl describe rs nginx-deployment-55897d69df
+    ```
+
+45. The old definition still has the previous version number. This is maintained so you can roll back the change to that version.
+** Rollback the Deployment**
+**The purpose of maintaining the previous ReplicaSet is to be able to rollback changes to any previous version.**
+47. Deployment history.
+    kubectl rollout history deploy/nginx-deployment
+48. Rollback the Deployment to the previous version.
+    kubectl rollout undo deploy/ng-dep
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
