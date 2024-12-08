@@ -214,10 +214,20 @@ spec:
     kubectl delete service nginx-service
     ```
 50. **Services**: Services help you expose Pods externally using label selectors.
-51. Service manifest file
+51. Deployment manifest file
+    ```
+
+    ```
+53. Service manifest file
     ```
     ```
-53. kubectl apply -f sample-dep.yaml
+54. Create deployment
+    kubectl apply -f my-deployment.yaml
+56. Show all pods
+    kubectl get pods --show-labels
+57. Create service
+    kubectl apply -f my-service.yaml
+    
 
 
 
