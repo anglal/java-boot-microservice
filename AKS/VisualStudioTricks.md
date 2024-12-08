@@ -10,3 +10,4 @@
 3. To create manifests files, create yaml file named "my-deployment.yaml"
 4. On the yaml file, just type "deployment", or "service" or "secret" and hit "Enter"
 5. It will autocomplete the manifests files and configure according to your needs.
+<img width="538" alt="image" src="https://github.com/user-attachments/assets/46885ac8-069e-4fca-8563-c65560c7c909">
