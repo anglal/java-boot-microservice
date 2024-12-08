@@ -207,8 +207,17 @@ spec:
 47. Deployment history.
     kubectl rollout history deploy/nginx-deployment
 48. Rollback the Deployment to the previous version.
-    kubectl rollout undo deploy/ng-dep
-
+    kubectl rollout undo deploy/nginx-deployment
+49. Delete the Deployment and Service
+    ```
+    kubectl delete deployment nginx-deployment
+    kubectl delete service nginx-service
+    ```
+50. **Services**: Services help you expose Pods externally using label selectors.
+51. Service manifest file
+    ```
+    ```
+53. kubectl apply -f sample-dep.yaml
 
 
 
