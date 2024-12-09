@@ -111,28 +111,28 @@ Command: 1. Create pod -> ``` kubectl apply -f my-pod.yaml ```
 19. Deploy above pod (``` kubectl apply -f simple-pod2-langde.yaml ```)
 20. Show all labels
     ``` kubectl get pods --show-labels ```
-20. Filter pods based on label (-l)
+21. Filter pods based on label (-l)
     kubectl get pod -l kind=web
 
-21. Query complete definition of a Pod from its internal database by exporting the output (-o) to YAML. Then pipe the result to a file.
+22. Query complete definition of a Pod from its internal database by exporting the output (-o) to YAML. Then pipe the result to a file.
     ``` kubectl get pods nginx-pod -o yaml > mypod.yaml ```
-22. For json : 
+23. For json : 
     ``` kubectl get pods nginx-pod -o yaml > mypod.json ```
-23. Open the yaml on VS Code
+24. Open the yaml on VS Code
     ``` code mypod.yaml ```
-24. Update labels of running pod
+25. Update labels of running pod
     ``` kubectl label pod nginx-pod health=fair ```
-25. Show the labels of a pod
+26. Show the labels of a pod
     ``` kubectl get pods nginx-pod --show-labels ```
-26. Update an existing label that is assigned to a running pod
+27. Update an existing label that is assigned to a running pod
     Change the value of the label kind=web to kind=db of the nginx-pod pod.
     ``` kubectl label pod nginx-pod kind=db --overwrite ```
-27. Delete a label that is assigned to a running Pod -> NOTE: Notice the minus (-)
+28. Delete a label that is assigned to a running Pod -> NOTE: Notice the minus (-)
     ``` kubectl label pod nginx-pod health- ```   
-28. Remove a label from all running pods by using the --all flag.
-29. Delete Pods based on their labels
+29. Remove a label from all running pods by using the --all flag.
+30. Delete Pods based on their labels
     ``` kubectl delete pod -l target=dev ```
-30. Deployments
+31. Deployments
     deployment.yaml
     ```
         apiVersion: apps/v1
@@ -177,17 +177,17 @@ Command: 1. Create pod -> ``` kubectl apply -f my-pod.yaml ```
               type: LoadBalancer  # Expose the service externally using a LoadBalancer
     ```
     
-31. Create a Deployment and a Service to access the Pods of the deployment.
+32. Create a Deployment and a Service to access the Pods of the deployment.
     ``` kubectl apply -f deployment.yaml ```
     ``` kubectl apply -f service.yaml ```
-32. This command applies your manifest file and records the command in the resource annotations.
+33. This command applies your manifest file and records the command in the resource annotations.
     ``` kubectl apply -f <file>.yaml --record ```
-33. Show the Pods, ReplicaSets, Deployments and Services
+34. Show the Pods, ReplicaSets, Deployments and Services
     ``` kubectl get all --show-labels ```
-34. Get services
+35. Get services
     ``` kubectl get svc ```
-35. Open browser and browse the external ip to access the service
-36. Update image version using command:
+36. Open browser and browse the external ip to access the service
+37. Update image version using command:
     ```
     kubectl set image deployment nginx-deployment nginx=nginx:1.27.3
 
@@ -199,32 +199,32 @@ Command: 1. Create pod -> ``` kubectl apply -f my-pod.yaml ```
     ![image](https://github.com/user-attachments/assets/40c41759-2074-4d8e-b140-61b0f6745832)
 
     This image will change to nginx:1.27.3
-37. Describe deployment
+38. Describe deployment
     ``` kubectl describe deployment nginx-deployment ```
-38. Show everything
+39. Show everything
     ``` kubectl get all ```
 
     Notice that the old replica set still exists, even though it has 0 Desired Pods.
     ![image](https://github.com/user-attachments/assets/9d7540d7-0491-47f3-92d6-13025a430790)
-39. Describe command on that old ReplicaSet.
+40. Describe command on that old ReplicaSet.
     ```
     kubectl describe rs nginx-deployment-55897d69df
     ```
 
-40. The old definition still has the previous version number. This is maintained so you can roll back the change to that version.
+41. The old definition still has the previous version number. This is maintained so you can roll back the change to that version.
 ** Rollback the Deployment**
 **The purpose of maintaining the previous ReplicaSet is to be able to rollback changes to any previous version.**
-41. Deployment history.
+42. Deployment history.
     ``` kubectl rollout history deploy/nginx-deployment ```
-41. Rollback the Deployment to the previous version.
+43. Rollback the Deployment to the previous version.
     ``` kubectl rollout undo deploy/nginx-deployment ```
-42. Delete the Deployment and Service
+44. Delete the Deployment and Service
     ```
     kubectl delete deployment nginx-deployment
     kubectl delete service nginx-service
     ```
-43. **Services**: Services help you expose Pods externally using label selectors.
-44. Deployment manifest file
+45. **Services**: Services help you expose Pods externally using label selectors.
+46. Deployment manifest file
 
     ```
     apiVersion: apps/v1
@@ -299,7 +299,7 @@ Command: 1. Create pod -> ``` kubectl apply -f my-pod.yaml ```
                   fieldPath: metadata.annotations
     
     ```
-45. Service manifest file
+47. Service manifest file
     ```
     apiVersion: v1
     kind: Service
@@ -313,15 +313,15 @@ Command: 1. Create pod -> ``` kubectl apply -f my-pod.yaml ```
       type: LoadBalancer
    
     ```
-46. Create deployment
+48. Create deployment
     kubectl apply -f my-deployment.yaml
-56. Show all pods
+49. Show all pods
     kubectl get pods --show-labels
-57. Create service
+50. Create service
     ``` kubectl apply -f my-service.yaml ```
-58. Check the service
+51. Check the service
     ``` kubectl get svc -o wide ```
-59. Delete the cluster: ``` az aks delete --name $AKS_NAME  --resource-group $RESOURCE_GROUP ```
+52. Delete the cluster: ``` az aks delete --name $AKS_NAME  --resource-group $RESOURCE_GROUP ```
     
 
 
