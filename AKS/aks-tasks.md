@@ -213,18 +213,19 @@ Command: 1. Create pod -> ``` kubectl apply -f my-pod.yaml ```
 
 41. The old definition still has the previous version number. This is maintained so you can roll back the change to that version.
 **Rollback the Deployment**
+
 **The purpose of maintaining the previous ReplicaSet is to be able to rollback changes to any previous version.**
-42. Deployment history.
+43. Deployment history.
     ``` kubectl rollout history deploy/nginx-deployment ```
-43. Rollback the Deployment to the previous version.
+44. Rollback the Deployment to the previous version.
     ``` kubectl rollout undo deploy/nginx-deployment ```
-44. Delete the Deployment and Service
+45. Delete the Deployment and Service
     ```
     kubectl delete deployment nginx-deployment
     kubectl delete service nginx-service
     ```
-45. **Services**: Services help you expose Pods externally using label selectors.
-46. Deployment manifest file
+46. **Services**: Services help you expose Pods externally using label selectors.
+47. Deployment manifest file
 
     ```
     apiVersion: apps/v1
@@ -299,7 +300,7 @@ Command: 1. Create pod -> ``` kubectl apply -f my-pod.yaml ```
                   fieldPath: metadata.annotations
     
     ```
-47. Service manifest file
+48. Service manifest file
     ```
     apiVersion: v1
     kind: Service
@@ -313,15 +314,15 @@ Command: 1. Create pod -> ``` kubectl apply -f my-pod.yaml ```
       type: LoadBalancer
    
     ```
-48. Create deployment
+49. Create deployment
     ``` kubectl apply -f my-deployment.yaml ```
-49. Show all pods
+50. Show all pods
     ``` kubectl get pods --show-labels ```
-50. Create service
+51. Create service
     ``` kubectl apply -f my-service.yaml ```
-51. Check the service
+52. Check the service
     ``` kubectl get svc -o wide ```
-52. Delete the cluster: ``` az aks delete --name $AKS_NAME  --resource-group $RESOURCE_GROUP ```
+53. Delete the cluster: ``` az aks delete --name $AKS_NAME  --resource-group $RESOURCE_GROUP ```
     
 
 
