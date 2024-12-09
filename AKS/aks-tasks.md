@@ -216,6 +216,7 @@ Command: 1. Create pod -> ``` kubectl apply -f my-pod.yaml ```
 **Rollback the Deployment**
 
 **The purpose of maintaining the previous ReplicaSet is to be able to rollback changes to any previous version.**
+
 43. Deployment history.
     ``` kubectl rollout history deploy/nginx-deployment ```
 44. Rollback the Deployment to the previous version.
