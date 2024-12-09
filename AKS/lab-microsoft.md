@@ -216,17 +216,100 @@ spec:
 50. **Services**: Services help you expose Pods externally using label selectors.
 51. Deployment manifest file
     ```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: first-app
+  template:
+    metadata:
+      name: sample-color-pod
+      labels:
+        app: first-app
+    spec:
+      nodeSelector:
+        kubernetes.io/os: linux
+      containers:
+      - name: my-app
+        image: nginx
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        env:
+        - name: IMAGE_COLOR
+          value: blue
+        - name: NODE_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.hostIP
+        - name: NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
+        - name: POD_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        - name: POD_SERVICE_ACCOUNT
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.serviceAccountName
+        - name: POD_CPU_REQUEST
+          valueFrom:
+            resourceFieldRef:
+              containerName: my-app
+              resource: requests.cpu
+        - name: POD_MEM_REQUEST
+          valueFrom:
+            resourceFieldRef:
+              containerName: my-app
+              resource: requests.memory
+        - name: POD_MEM_LIMIT
+          valueFrom:
+            resourceFieldRef:
+              containerName: my-app
+              resource: limits.memory
+        volumeMounts:
+          - name : podinfo
+            mountPath: /etc/podinfo
+      volumes:
+      - name: podinfo
+        downwardAPI:
+          items:
+          - path: "labels"
+            fieldRef:
+              fieldPath: metadata.labels
+          - path: "annotations"
+            fieldRef:
+              fieldPath: metadata.annotations
 
     ```
 53. Service manifest file
     ```
+    apiVersion: v1
+    kind: Service
+    metadata:
+      name: my-service
+    spec:
+      selector:
+        app: first-app
+      ports:
+      - port: 80
+      type: LoadBalancer
+   
     ```
 54. Create deployment
     kubectl apply -f my-deployment.yaml
 56. Show all pods
     kubectl get pods --show-labels
 57. Create service
-    kubectl apply -f my-service.yaml
+    ``` kubectl apply -f my-service.yaml ```
+58. Check the service
+    ``` kubectl get svc -o wide ```
     
 
 
