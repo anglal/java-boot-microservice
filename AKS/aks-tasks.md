@@ -316,7 +316,7 @@ Command: 1. Create pod -> ``` kubectl apply -f my-pod.yaml ```
 48. Create deployment
     kubectl apply -f my-deployment.yaml
 49. Show all pods
-    kubectl get pods --show-labels
+    ``` kubectl get pods --show-labels ```
 50. Create service
     ``` kubectl apply -f my-service.yaml ```
 51. Check the service
